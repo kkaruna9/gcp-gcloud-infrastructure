@@ -18,7 +18,7 @@ export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 
 
 #gsutil cp -r gs://gd-investments-1000311198.appspot.com/infrastructure-artefacts gs://artifacts.$PROJECT_ID/gcpworkshop-code-repos
-gsutil -m cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos gs://artifacts-$LZ_PROJECT_ID/gcpworkshop-code-repos
+gsutil -m cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos gs://lz-artifacts-$LZ_PROJECT_ID/gcpworkshop-code-repos
 #download all repos
 #gsutil -mq cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos .
 gsutil -mq cp -r gs://$LZ_PROJECT_ID/gcpworkshop-code-repos .
