@@ -1,0 +1,2 @@
+kubectl run reporting-dashboard --image=karthiknarayanpdec11/reporting-dashboard:latest
+kubectl expose pod reporting-dashboard --port=3337 --target-port=3337 --name=reporting-dashboard --type=LoadBalancer
