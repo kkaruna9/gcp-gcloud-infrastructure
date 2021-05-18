@@ -11,8 +11,7 @@ then
   echo "Created '$LZ_REPOPREFIX-landling-zone' repository"
 else
   echo "Failed to create '$LZ_REPOPREFIX-landling-zone' repository"
-
-
+fi
 
 gcloud -q source repos create $LZ_REPOPREFIX-gcp-aut-frontend
 if [ $? -eq 0 ]
