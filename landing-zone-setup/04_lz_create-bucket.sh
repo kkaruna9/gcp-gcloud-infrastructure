@@ -6,6 +6,7 @@ echo "
 "
 #gsutil -q mb -p $LZ_PROJECT_ID -c $LZBUCKET_STORAGE_CLASS -l $LZ_BUCKET_LOCATION -b on gs://$LZ_BUCKET_NAME
 gsutil mb gs://$BUCKET_NAME
+gsutil mb gs://$LZ_BUCKET_REPO
 if [ $? -eq 0 ]
 then
   echo "Storage bucket created successfully with the name '$LZ_BUCKET_NAME' "

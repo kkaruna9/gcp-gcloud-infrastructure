@@ -17,6 +17,8 @@ export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 
 
+#gsutil cp gs://gd-investments-1000311198.appspot.com gs://artifacts.$PROJECT_ID/gcpworkshop-code-repos
+
 #download all repos
 #gsutil -mq cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos .
 gsutil -mq cp -r gs://$LZ_PROJECT_ID.appspot.com/gcpworkshop-code-repos .
