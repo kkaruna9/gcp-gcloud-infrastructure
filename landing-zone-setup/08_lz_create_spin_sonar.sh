@@ -50,5 +50,4 @@ helm template "$APP_INSTANCE_NAME" chart/sonarqube \
 kubectl apply -f "${APP_INSTANCE_NAME}_manifest.yaml" --namespace "${NAMESPACE}"
 echo "https://console.cloud.google.com/kubernetes/application/${ZONE}/${CLUSTER}/${NAMESPACE}/${APP_INSTANCE_NAME}"
 kubectl port-forward --namespace $NAMESPACE svc/$APP_INSTANCE_NAME-sonarqube-svc 9000:9000
-
-
+kubectl port-forward --namespace $default svc/$sonarqube-1-sonarqube-svc 9000:9000

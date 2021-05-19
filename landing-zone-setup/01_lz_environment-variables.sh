@@ -4,7 +4,6 @@ echo "
 | Environment variable creation  '$LZ_PROJECT_ID '.                       |
 +----------------------------------------------------------------------------+
 "
-
 # git clone https://github.com/dinesh-akrishnan/gcp-gcloud-infrastructure.git
 # cd gcp-gcloud-infrastructure
 # cd landing-zone-setup
@@ -16,7 +15,6 @@ export LZ_BUCKET_LOCATION="US-EAST1"
 export LZ_BUCKET_STORAGE_CLASS="STANDARD"
 export LZ_BUCKET_REPO="lz-artifacts"
 export LZ_PROJECT_ID=$(gcloud config get-value project)
-
 echo $LZ_REPOPREFIX
 echo $LZ_BUCKET_NAME
 echo $LZ_BUCKET_LOCATION
