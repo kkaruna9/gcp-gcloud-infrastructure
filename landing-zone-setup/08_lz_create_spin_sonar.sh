@@ -51,3 +51,7 @@ kubectl apply -f "${APP_INSTANCE_NAME}_manifest.yaml" --namespace "${NAMESPACE}"
 echo "https://console.cloud.google.com/kubernetes/application/${ZONE}/${CLUSTER}/${NAMESPACE}/${APP_INSTANCE_NAME}"
 kubectl port-forward --namespace $NAMESPACE svc/$APP_INSTANCE_NAME-sonarqube-svc 9000:9000
 #kubectl port-forward --namespace $default svc/$sonarqube-1-sonarqube-svc 9000:9000
+
+kubectl create deployment --image=karthiknarayanpdec11/reporting-dashboard:latest reportingdashboard
+kubectl expose deployment reportingdashboard --name=reportingdashboard-service --type=LoadBalancer --port 3337 --target-port 3337
+kubectl get service

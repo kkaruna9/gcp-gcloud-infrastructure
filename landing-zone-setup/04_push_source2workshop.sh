@@ -7,7 +7,7 @@ echo "
 +----------------------------------------------------------------------------+
 "
 export REPO_PATH="https://source.developers.google.com/p/"$GOOGLE_CLOUD_PROJECT"/r/"
-
+echo $REPO_PATH
 export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
 export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
 export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
@@ -17,11 +17,9 @@ export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 
 
-#gsutil cp -r gs://gd-investments-1000311198.appspot.com/infrastructure-artefacts gs://artifacts.$PROJECT_ID/gcpworkshop-code-repos
-gsutil -m cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos gs://lz-artifacts-$LZ_PROJECT_ID/gcpworkshop-code-repos
-#download all repos
 #gsutil -mq cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos .
-gsutil -mq cp -r gs://$LZ_PROJECT_ID/gcpworkshop-code-repos .
+gsutil -mq cp -r gs://lz-artifacts-$PROJECT_ID/gcpworkshop-code-repos .
+#gsutil -mq cp -r gs://$PROJECT_ID/gcpworkshop-code-repos .
 cd gcpworkshop-code-repos
 
 #frontend repo
@@ -129,6 +127,7 @@ then
 else
   echo "Failed to push code into '$LZ_REPOPREFIX-gcp-tests-accessibility' repository"
 fi
+cd ..
 
 echo "
 +----------------------------------------------------------------------------+
