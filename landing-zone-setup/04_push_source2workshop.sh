@@ -11,7 +11,7 @@ echo $REPO_PATH
 export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
 export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
 export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
-export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-functional-assurance"
+export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPRcdEFIX"-gcp-functional-assurance"
 export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
 export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
@@ -70,7 +70,7 @@ fi
 cd ..
 
 #functional test repo
-cd gcpworkshop-functional-assurance
+cd gcpworkshop-tests-functional
 git init
 git add .
 git commit -m "init commit" --quiet
