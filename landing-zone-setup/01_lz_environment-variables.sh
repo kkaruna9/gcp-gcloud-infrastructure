@@ -29,5 +29,5 @@ echo $LZ_BUCKET_STORAGE_CLASS
 echo $LZ_BUCKET_REPO
 echo $PROJECT_ID
 
-git config --global user.email=a.dinesh1901@gmail.com
-git config --global user.name=Dinesh
+git config --global user.email a.dinesh1901@gmail.com
+git config --global user.name dinesh-akrishnan
