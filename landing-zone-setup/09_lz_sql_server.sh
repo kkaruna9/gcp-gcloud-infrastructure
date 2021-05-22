@@ -24,3 +24,5 @@ kubectl apply -f https://raw.githubusercontent.com/yogirk/mssql-ha-gke/master/sq
 kubectl apply -f https://raw.githubusercontent.com/yogirk/mssql-ha-gke/master/mssql-ag-services.yaml --namespace mssql-ag
 
 kubectl get services --namespace mssql-ag
+
+
