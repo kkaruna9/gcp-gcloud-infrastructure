@@ -21,5 +21,6 @@ if [ $? -eq 0 ]
 then
   echo "Storage bucket created successfully with the name '$LZ_BUCKET_REPORTS$LZ_PROJECT_ID' "
 else
-  echo "Storage bucket creation failed for the bucket '$LZ_BUCKET_REPORTS$LZ_PROJECT_ID' "
+  echo "Storage bucket creation failed for the bucket '$LZ_BUCKET_REPORTS$LZ_PROJECT_ID' "clear
+
 fi
