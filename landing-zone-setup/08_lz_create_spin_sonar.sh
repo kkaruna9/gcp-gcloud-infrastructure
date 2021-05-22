@@ -5,6 +5,7 @@ echo "
 +----------------------------------------------------------------------------+
 
 "
+export PROJECT_ID=$(gcloud config get-value project)
 gcloud auth configure-docker
 export CLUSTER=sonarqube-cluster
 export ZONE=us-west1-a

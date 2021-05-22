@@ -21,12 +21,13 @@ export LZ_BUCKET_LOCATION="US-EAST1"
 export LZ_BUCKET_STORAGE_CLASS="STANDARD"
 export LZ_BUCKET_REPO="lz-artifacts"
 #export LZ_PROJECT_ID=$(gcloud config get-value project)
+export PROJECT_ID=$(gcloud config get-value project)
 echo $LZ_REPOPREFIX
 echo $LZ_BUCKET_NAME
 echo $LZ_BUCKET_LOCATION
 echo $LZ_BUCKET_STORAGE_CLASS
 echo $LZ_BUCKET_REPO
-#echo $LZ_PROJECT_ID
+echo $PROJECT_ID
 
-#git config --global user.email
-#git config --global user.name $GIT-USER-NAME
+git config --global user.email=a.dinesh1901@gmail.com
+git config --global user.name=Dinesh

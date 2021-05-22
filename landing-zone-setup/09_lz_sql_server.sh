@@ -6,6 +6,7 @@ echo "
 +----------------------------------------------------------------------------+
 
 "
+export PROJECT_ID=$(gcloud config get-value project)
 export LZ_PROJECT_ID=$(gcloud config get-value project)
 gcloud beta container --project $LZ_PROJECT_ID clusters \
 create "mssql-ag-gke-rk" --zone "us-west1-a" --username "admin" \
