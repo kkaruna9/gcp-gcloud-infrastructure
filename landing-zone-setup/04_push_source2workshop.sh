@@ -127,7 +127,7 @@ then
 else
   echo "Failed to push code into '$LZ_REPOPREFIX-gcp-tests-accessibility' repository"
 fi
-cd ..
+
 
 echo "
 +----------------------------------------------------------------------------+
