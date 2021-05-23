@@ -6,7 +6,7 @@ echo "
 
 "
 export SONAR_NAME="sonarqube-3"
-export PROJECT_ID=$(gclµoud config get-value project)
+export PROJECT_ID=$(gcloud config get-value project)
 gcloud container clusters get-credentials spinnaker-ci-cd --zone us-east1-c --project $PROJECT_ID
 kubectl create -n sonarqube
 helm repo add stable https://charts.helm.sh/stable
