@@ -8,7 +8,7 @@ echo "
 export SONAR_NAME="sonarqube-3"
 export PROJECT_ID=$(gcloud config get-value project)
 gcloud container clusters get-credentials spinnaker-ci-cd --zone us-east1-c --project $PROJECT_ID
-kubectl create -n sonarqube
+kubectl create namespace sonarqube
 helm repo add stable https://charts.helm.sh/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm search repo spinnaker
