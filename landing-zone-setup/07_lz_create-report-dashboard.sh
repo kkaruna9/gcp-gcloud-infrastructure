@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "
 +----------------------------------------------------------------------------+
-| Hosting docker container for the reporting dashboard '$LZ_PROJECT_ID '.                       |
+| GCP Landing | Hosting docker container for the reporting dashboard '$LZ_PROJECT_ID '.                       |
 +----------------------------------------------------------------------------+
 
 "

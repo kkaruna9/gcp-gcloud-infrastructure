@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "
 +----------------------------------------------------------------------------+
-| Environment variable creation                        |
+| GCP Landing | Environment variable creation                        |
 +----------------------------------------------------------------------------+
 "
 # git clone https://github.com/dinesh-akrishnan/gcp-gcloud-infrastructure.git

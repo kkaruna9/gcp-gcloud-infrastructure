@@ -2,7 +2,7 @@
 
 echo "
 +----------------------------------------------------------------------------+
-| Please wait as the code is being pushed to your cloud source repositories. |
+| GCP Landing | Please wait as the code is being pushed to your cloud source repositories. |
 | (This will take approx. 3-5 minutes.)                                      |
 +----------------------------------------------------------------------------+
 "

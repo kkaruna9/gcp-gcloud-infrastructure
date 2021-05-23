@@ -2,7 +2,7 @@
 
 echo "
 +----------------------------------------------------------------------------+
-| Creating and Spinning up Grid server for the workshop                 |
+| GCP Landing | Creating and Spinning up Grid server for the workshop                 |
 +----------------------------------------------------------------------------+
 "
 export LZ_PROJECT_ID=$(gcloud config get-value project)
