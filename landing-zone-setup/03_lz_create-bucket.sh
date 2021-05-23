@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "
 +----------------------------------------------------------------------------+
-| GCP Landing | Creating cloud storage bucket in the '$LZ_PROJECT_ID '.                       |
+| Creating cloud storage bucket in the '$LZ_PROJECT_ID '.                    |
 +----------------------------------------------------------------------------+
 "
 export LZ_PROJECT_ID=$(gcloud config get-value project)

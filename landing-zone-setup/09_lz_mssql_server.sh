@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "
 +----------------------------------------------------------------------------+
-| GCP Landing | Zone Microsoft SQL Server Installation |
+| Zone Microsoft SQL Server Installation                                     |
 +----------------------------------------------------------------------------+
 
 "
