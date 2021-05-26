@@ -53,9 +53,21 @@ function useDB() {
 }
 
 function showdatabases(){
+    sql.connect(config).then(pool => {
+        if (pool.connecting) {
+            console.log('Connecting to the database...')
+        }
+        if (pool.connected) {
+            console.log('Connected to SQL Server')
+        }
+    })
+}
+
+
      sql.connect(config).then(function () {
                 var request = new sql.Request();
                 request.query("show databases").then(function (resp) {
+                   console.log('data bases :::: '+ resp);
                     sql.close();
                 }).catch(function (err) {
                     sql.close();
