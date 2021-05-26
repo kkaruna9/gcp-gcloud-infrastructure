@@ -18,7 +18,7 @@ const config = {
     server: '35.237.14.90',
     options: {
         "enableArithAbort": true
-        trustServerCertificate: true
+        //trustServerCertificate: true
     },
     requestTimeout: 10000,
  }
