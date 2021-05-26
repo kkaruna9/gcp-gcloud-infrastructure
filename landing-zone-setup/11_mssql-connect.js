@@ -61,7 +61,7 @@ function showdatabases(){
             console.log('Connected to SQL Server')
         }
     })
-}
+
 
 
      sql.connect(config).then(function () {
