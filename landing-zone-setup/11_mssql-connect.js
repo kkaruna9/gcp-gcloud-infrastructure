@@ -53,15 +53,16 @@ function useDB() {
 }
 
 function showdatabases(){
-    sql.connect(config).then(function(err) {
-      if (err) throw err;
-    //sql.connect(config).then(function () {
-       //var request = new sql.Request();
-      sql.query("show databases", function (err, result, fields) {
-        if (err) throw err;
-        console.log(result);
-      });
-    });
+     sql.connect(config).then(function () {
+                var request = new sql.Request();
+                request.query("show databases").then(function (resp) {
+                    sql.close();
+                }).catch(function (err) {
+                    sql.close();
+                });
+            }).catch(function (err) {
+
+            });
 }
 
 
