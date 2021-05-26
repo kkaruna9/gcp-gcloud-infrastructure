@@ -24,6 +24,7 @@ const config = {
 
 createDB();
 useDB();
+showdatabases();
 
 function createDB() {
     sql.connect(config).then(function () {
@@ -46,5 +47,20 @@ function useDB() {
                 sql.close();
             });
         }).catch(function (err) {
+
         });
 }
+
+function showdatabases(){
+    sql.connect(config).then(function(err) {
+      if (err) throw err;
+    //sql.connect(config).then(function () {
+       //var request = new sql.Request();
+      sql.query("show databases", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+      });
+    });
+}
+
+
