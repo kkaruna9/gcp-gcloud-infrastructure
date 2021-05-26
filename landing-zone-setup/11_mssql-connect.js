@@ -25,7 +25,7 @@ const config = {
 
 createDB();
 useDB();
-showdatabases();
+
 
 function createDB() {
     sql.connect(config).then(function () {
@@ -33,9 +33,11 @@ function createDB() {
         request.query("create database ctsshop").then(function (resp) {
             sql.close();
         }).catch(function (err) {
+            console.log('err' + err)
             sql.close();
         });
     }).catch(function (err) {
+      console.log('Conn error ' + err)
     });
 }
 
@@ -45,17 +47,15 @@ function useDB() {
             request.query("USE ctsshop").then(function (resp) {
                 sql.close();
             }).catch(function (err) {
+              console.log('use err' + err)
                 sql.close();
             });
         }).catch(function (err) {
-
+              console.log('Use DB conn err ' + err)
         });
 }
 
 function showdatabases(){
-
-
-
      sql.connect(config).then(function () {
                 var request = new sql.Request();
                 request.query("show databases").then(function (resp) {
