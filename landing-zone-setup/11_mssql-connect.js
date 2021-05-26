@@ -11,7 +11,7 @@ let organizationName = mstackTokenJson.ORGANIZATION_NAME;
 sh.exec(`export AZURE_DEVOPS_EXT_PAT=${token}`, {async: false, silent:true}).stdout;
 sh.exec(`export myorganization=${organizationName}`, {async: false, silent:true}).stdout;
 */
-
+const sql = require('mssql');
 const config = {
     user: 'sa',
     password: 'Ctsshop@db',
