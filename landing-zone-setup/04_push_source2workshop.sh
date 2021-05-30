@@ -47,7 +47,7 @@ git add .
 git commit -m "init commit" --quiet
 git remote add origin $BACKEND_REPO
 git push -u origin master --quiet
-zon
+if [ $? -eq 0 ]
 then
   echo "Code push success on '$LZ_REPOPREFIX-gcp-aut-backend' repository"
 else
