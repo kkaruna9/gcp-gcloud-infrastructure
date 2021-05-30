@@ -11,7 +11,7 @@ echo $REPO_PATH
 export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
 export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
 export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
-export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPRcdEFIX"-gcp-functional-assurance"
+export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-functional-assurance"
 export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
 export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
@@ -79,9 +79,9 @@ git remote add origin $FUNCTIONAL_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-functional-assuran' repository"
+  echo "Code push success on '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-functional-assuran' repository"
+  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
 fi
 cd ..
 
