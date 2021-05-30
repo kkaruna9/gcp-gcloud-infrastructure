@@ -18,7 +18,7 @@ export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 export PROJECT_ID=$(gcloud config get-value project)
 
 #gsutil -mq cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos .
-gsutil -mq cp -r gs://lz-artifacts-$PROJECT_ID/gcpworkshop-code-repos .
+gsutil -mq cp -r gs://lz-artifacts-qea-sandbox/gcpworkshop-code-repos .
 #gsutil -mq cp -r gs://$PROJECT_ID/gcpworkshop-code-repos .
 cd gcpworkshop-code-repos
 
@@ -46,7 +46,7 @@ git add .
 git commit -m "init commit" --quiet
 git remote add origin $BACKEND_REPO
 git push -u origin master --quiet
-if [ $? -eq 0 ]
+zon
 then
   echo "Code push success on '$LZ_REPOPREFIX-gcp-aut-backend' repository"
 else
