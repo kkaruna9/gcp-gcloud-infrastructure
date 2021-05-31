@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="functional assurance name corection">
+      <change afterPath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/01_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/03_lz_create-bucket.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/03_lz_create-bucket.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/04_push_source2workshop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/04_push_source2workshop.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/05_lz_spin_grid_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/05_lz_spin_grid_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/06_lz_create_container_registry.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/06_lz_create_container_registry.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/07_lz_create-report-dashboard.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/07_lz_create-report-dashboard.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/08_lz_sonarqube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_mssql.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/08_lz_mssql.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_mssql_server_OLD.sh" beforeDir="false" afterPath="$PROJECT_DIR$/To_Clean/15_lz_mssql_server_OLD.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_sql_server_OLD_OLD.sh" beforeDir="false" afterPath="$PROJECT_DIR$/To_Clean/15_lz_sql_server_OLD_OLD.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/11_mssql-connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/11_mssql-connect.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1shDlHiXFBvkj9gfm37MgDpKPSd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/landing-zone" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="main" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/landing-zone" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/To_Clean" />
+      <recent name="$PROJECT_DIR$/landing-zone-teardown" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="" />
+      <created>1621316076470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621316076470</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Committing the changes for landingzone infrastructure setup">
+      <created>1621317129851</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621317129851</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Committing the changes for landingzone infrastructure setup - push source2workshop">
+      <created>1621321255384</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621321255384</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Committing the changes for landingzone infrastructure setup - push source2workshop">
+      <created>1621338226274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621338226274</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Committing the changes for landingzone infrastructure setup - environment variables cleanup">
+      <created>1621339283561</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621339283561</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Committing the changes for landingzone infrastructure setup - environment variables cleanup">
+      <created>1621339892795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621339892795</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated the variable values in double quotes">
+      <created>1621340043832</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621340043832</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated the scripts for env variables , push_source2workshop and createBucket">
+      <created>1621360241827</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621360241827</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated the scripts for bucket creation logics">
+      <created>1621364986603</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621364986603</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Upated the rm scripts">
+      <created>1621365793044</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621365793044</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updated the variable script for echo the variable values">
+      <created>1621366357007</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1621366357007</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updated 04_push for the lz inclusion">
+      <created>1621366994443</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621366994443</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Updated 05 grid export variable">
+      <created>1621367299195</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1621367299195</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updated 05 grid export variable">
+      <created>1621422639643</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621422639643</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated 05 grid export variable">
+      <created>1621423278666</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621423278666</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated 05 grid export variable">
+      <created>1621423315131</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621423315131</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated 05 grid export variable">
+      <created>1621423350813</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1621423350813</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated 05 grid export variable">
+      <created>1621661943916</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621661943916</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated 05 grid export variable">
+      <created>1621662232458</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1621662232458</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Udated the changes for the push repo conflicts">
+      <created>1621676635589</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1621676635589</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated the variables names accross">
+      <created>1621676985500</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621676985500</updated>
+    </task>
+    <task id="LOCAL-00021" summary="git user variable issue">
+      <created>1621677173430</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621677173430</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated the push command folder name">
+      <created>1621679113026</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1621679113026</updated>
+    </task>
+    <task id="LOCAL-00023" summary="updated and removed dashboard commands">
+      <created>1621684400734</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621684400734</updated>
+    </task>
+    <task id="LOCAL-00024" summary="SonarQube fix has been done">
+      <created>1621780949543</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621780949543</updated>
+    </task>
+    <task id="LOCAL-00025" summary="MSSQL and SONAR and User Messages...">
+      <created>1621797526653</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621797526653</updated>
+    </task>
+    <task id="LOCAL-00026" summary="removed cd..">
+      <created>1621798921572</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1621798921572</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added  cd at the end of push">
+      <created>1621798974436</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621798974436</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Updated the Comments">
+      <created>1621799190779</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1621799190779</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Updated the Comments">
+      <created>1621800190039</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1621800190039</updated>
+    </task>
+    <task id="LOCAL-00030" summary="sonar namespace">
+      <created>1621800662976</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1621800662976</updated>
+    </task>
+    <task id="LOCAL-00031" summary="sonar namespace">
+      <created>1621802951325</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1621802951325</updated>
+    </task>
+    <task id="LOCAL-00032" summary="nmp connect to database">
+      <created>1622004521955</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1622004521955</updated>
+    </task>
+    <task id="LOCAL-00033" summary="nmp connect to database - ip address">
+      <created>1622004756778</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1622004756778</updated>
+    </task>
+    <task id="LOCAL-00034" summary="nmp connect to database - mssql constant">
+      <created>1622005068624</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1622005068624</updated>
+    </task>
+    <task id="LOCAL-00035" summary="nmp connect to database - show databases query">
+      <created>1622007217556</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1622007217556</updated>
+    </task>
+    <task id="LOCAL-00036" summary="nmp connect to database - trust certificate exception">
+      <created>1622007380133</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1622007380133</updated>
+    </task>
+    <task id="LOCAL-00037" summary="nmp connect to database - trust certificate exception">
+      <created>1622007448162</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1622007448162</updated>
+    </task>
+    <task id="LOCAL-00038" summary="nmp connect to database - trust certificate exception">
+      <created>1622007495502</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1622007495502</updated>
+    </task>
+    <task id="LOCAL-00039" summary="nmp connect to database - show data">
+      <created>1622007674309</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1622007674309</updated>
+    </task>
+    <task id="LOCAL-00040" summary="nmp connect to database - show data">
+      <created>1622007980951</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1622007980951</updated>
+    </task>
+    <task id="LOCAL-00041" summary="nmp connect to database - show data">
+      <created>1622008011460</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1622008011460</updated>
+    </task>
+    <task id="LOCAL-00042" summary="nmp connect to database - show data">
+      <created>1622008194466</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1622008194466</updated>
+    </task>
+    <task id="LOCAL-00043" summary="added npm console - log">
+      <created>1622008927412</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1622008927412</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added npm console - ipaddress">
+      <created>1622009184896</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1622009184896</updated>
+    </task>
+    <task id="LOCAL-00045" summary="added npm console - options">
+      <created>1622009305183</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1622009305183</updated>
+    </task>
+    <task id="LOCAL-00046" summary="updated the )4_push_source2workshop.sh - repo path to hard coded">
+      <created>1622406978656</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1622406978656</updated>
+    </task>
+    <task id="LOCAL-00047" summary="updated the 04_push_source2workshop.sh - repo path to hard coded">
+      <created>1622407031808</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1622407031808</updated>
+    </task>
+    <task id="LOCAL-00048" summary="updated the 04_push_source2workshop.sh - repo path to hard coded">
+      <created>1622407763048</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1622407763048</updated>
+    </task>
+    <task id="LOCAL-00049" summary="functional assurance name corection">
+      <created>1622409838529</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1622409838529</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated 04_push for the lz inclusion" />
+    <MESSAGE value="Updated 05 grid export variable" />
+    <MESSAGE value="Udated the changes for the push repo conflicts" />
+    <MESSAGE value="Updated the variables names accross" />
+    <MESSAGE value="git user variable issue" />
+    <MESSAGE value="Updated the push command folder name" />
+    <MESSAGE value="updated and removed dashboard commands" />
+    <MESSAGE value="SonarQube fix has been done" />
+    <MESSAGE value="MSSQL and SONAR and User Messages..." />
+    <MESSAGE value="removed cd.." />
+    <MESSAGE value="added  cd at the end of push" />
+    <MESSAGE value="Updated the Comments" />
+    <MESSAGE value="sonar namespace" />
+    <MESSAGE value="nmp connect to database" />
+    <MESSAGE value="nmp connect to database - ip address" />
+    <MESSAGE value="nmp connect to database - mssql constant" />
+    <MESSAGE value="nmp connect to database - show databases query" />
+    <MESSAGE value="nmp connect to database - trust certificate exception" />
+    <MESSAGE value="nmp connect to database - show data" />
+    <MESSAGE value="added npm console - log" />
+    <MESSAGE value="added npm console - ipaddress" />
+    <MESSAGE value="added npm console - options" />
+    <MESSAGE value="updated the )4_push_source2workshop.sh - repo path to hard coded" />
+    <MESSAGE value="updated the 04_push_source2workshop.sh - repo path to hard coded" />
+    <MESSAGE value="functional assurance name corection" />
+    <option name="LAST_COMMIT_MESSAGE" value="functional assurance name corection" />
+  </component>
+</project>
