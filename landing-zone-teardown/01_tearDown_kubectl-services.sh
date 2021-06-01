@@ -7,6 +7,8 @@ echo "
 "
 
 #kubectl delete all --all --all-namespaces
+kubectl delete pods --all
 kubectl delete namespaces $KUBECTL_SONARQUBE
 kubectl delete namespaces $KUBECTL_GRID
 kubectl delete namespaces $KUBECTL_RDASHBAORD
+

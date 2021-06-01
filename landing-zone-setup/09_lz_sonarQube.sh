@@ -11,7 +11,7 @@ gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA --zone $DEFAULT_Z
 kubectl create namespace $KUBECTL_SONARQUBE
 kubectl get namespace
 kubectl describe po -n $KUBECTL_SONARQUBE $KUBECTL_SONARQUBE
-kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community  --requests='cpu=0.75,memory=1250Mi' --namespace=$KUBECTL_SONARQUBE
+kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community --namespace=$KUBECTL_SONARQUBE --requests='cpu=0.75,memory=1250Mi'
 kubectl expose pod $KUBECTL_SONARQUBE --port=6002 --target-port=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
 
 

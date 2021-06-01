@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="functional assurance name corection">
-      <change afterPath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/01_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Added pod to the script">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-zone-setup/03_lz_create-bucket.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/03_lz_create-bucket.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/04_push_source2workshop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/04_push_source2workshop.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/05_lz_spin_grid_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/05_lz_spin_grid_server.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/06_lz_create_container_registry.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/06_lz_create_container_registry.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/07_lz_create-report-dashboard.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/07_lz_create-report-dashboard.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/08_lz_sonarqube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_mssql.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/08_lz_mssql.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_mssql_server_OLD.sh" beforeDir="false" afterPath="$PROJECT_DIR$/To_Clean/15_lz_mssql_server_OLD.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_sql_server_OLD_OLD.sh" beforeDir="false" afterPath="$PROJECT_DIR$/To_Clean/15_lz_sql_server_OLD_OLD.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/11_mssql-connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/11_mssql-connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/01_tearDown_kubectl-services.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/01_tearDown_kubectl-services.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,55 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621316076470</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Committing the changes for landingzone infrastructure setup">
-      <created>1621317129851</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1621317129851</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Committing the changes for landingzone infrastructure setup - push source2workshop">
-      <created>1621321255384</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1621321255384</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Committing the changes for landingzone infrastructure setup - push source2workshop">
-      <created>1621338226274</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1621338226274</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Committing the changes for landingzone infrastructure setup - environment variables cleanup">
-      <created>1621339283561</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1621339283561</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Committing the changes for landingzone infrastructure setup - environment variables cleanup">
-      <created>1621339892795</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1621339892795</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Updated the variable values in double quotes">
-      <created>1621340043832</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1621340043832</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Updated the scripts for env variables , push_source2workshop and createBucket">
-      <created>1621360241827</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1621360241827</updated>
     </task>
     <task id="LOCAL-00008" summary="Updated the scripts for bucket creation logics">
       <created>1621364986603</created>
@@ -404,7 +348,56 @@
       <option name="project" value="LOCAL" />
       <updated>1622409838529</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Revamped entire flow with naming convenstions along with the kubectl commands">
+      <created>1622481329974</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1622481329975</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Updated the the cluster creation commands">
+      <created>1622483046836</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1622483046836</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Updated the default zone and regions">
+      <created>1622483601128</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1622483601128</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Changed the cluster instance names to lower case">
+      <created>1622483740807</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1622483740807</updated>
+    </task>
+    <task id="LOCAL-00054" summary="SonarQube namespace">
+      <created>1622485122500</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1622485122500</updated>
+    </task>
+    <task id="LOCAL-00055" summary="TearDown Kubectl services">
+      <created>1622485602015</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1622485602015</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added pod to the script">
+      <created>1622485891406</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1622485891406</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -430,13 +423,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated 04_push for the lz inclusion" />
-    <MESSAGE value="Updated 05 grid export variable" />
-    <MESSAGE value="Udated the changes for the push repo conflicts" />
-    <MESSAGE value="Updated the variables names accross" />
-    <MESSAGE value="git user variable issue" />
-    <MESSAGE value="Updated the push command folder name" />
-    <MESSAGE value="updated and removed dashboard commands" />
     <MESSAGE value="SonarQube fix has been done" />
     <MESSAGE value="MSSQL and SONAR and User Messages..." />
     <MESSAGE value="removed cd.." />
@@ -455,6 +441,13 @@
     <MESSAGE value="updated the )4_push_source2workshop.sh - repo path to hard coded" />
     <MESSAGE value="updated the 04_push_source2workshop.sh - repo path to hard coded" />
     <MESSAGE value="functional assurance name corection" />
-    <option name="LAST_COMMIT_MESSAGE" value="functional assurance name corection" />
+    <MESSAGE value="Revamped entire flow with naming convenstions along with the kubectl commands" />
+    <MESSAGE value="Updated the the cluster creation commands" />
+    <MESSAGE value="Updated the default zone and regions" />
+    <MESSAGE value="Changed the cluster instance names to lower case" />
+    <MESSAGE value="SonarQube namespace" />
+    <MESSAGE value="TearDown Kubectl services" />
+    <MESSAGE value="Added pod to the script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pod to the script" />
   </component>
 </project>

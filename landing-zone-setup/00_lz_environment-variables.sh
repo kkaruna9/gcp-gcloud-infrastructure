@@ -21,6 +21,14 @@ export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_CLUSTER_QEA="gcp-qea-server"
 export DEFAULT_CLUSTER_APP="gcp-app-server"
+export DEFAULT_GRID_IP=""
+export DEFAULT_DASHBOARD_IP=""
+export DEFAULT_SONAR_IP=""
+export DEFAULT_MSSQL_IP=""
+export DEFAULT_API_HOST=""
+export DEFAULT_APPLICATION_HOST=""
+export DEFAULT_CONFIG_NAME=""
+
 
 
 
@@ -29,6 +37,10 @@ export DEFAULT_BUCKET_STORAGE_CLASS="STANDARD"
 export DEFAULT_BUCKET_REPO="lz-artifacts-"
 export DEFAULT_BUCKET_REPORTS="lz-reports"
 export LZ_BUCKET_NAME="lz-results"
+export REPORTS_APITEST="APITest"
+export REPORTS_RWDTEST="RWDTest"
+export REPORTS_SMOKE="Smoke"
+export REPORTS_UITEST="UITest"
 
 # SonarQube
 export SONAR_NAME="sonarqube-1"
