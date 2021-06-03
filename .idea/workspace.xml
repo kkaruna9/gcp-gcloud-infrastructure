@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Updated the directories variables and buckets">
-      <change afterPath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" afterDir="false" />
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Default config name value assigned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,20 +49,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621316076470</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Upated the rm scripts">
-      <created>1621365793044</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1621365793044</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Updated the variable script for echo the variable values">
-      <created>1621366357007</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1621366357007</updated>
     </task>
     <task id="LOCAL-00011" summary="Updated 04_push for the lz inclusion">
       <created>1621366994443</created>
@@ -394,7 +379,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622577451132</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Updated the directories variables and buckets">
+      <created>1622696232112</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1622696232112</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Default config name value assigned">
+      <created>1622698272625</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1622698272625</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -420,7 +419,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MSSQL and SONAR and User Messages..." />
     <MESSAGE value="removed cd.." />
     <MESSAGE value="added  cd at the end of push" />
     <MESSAGE value="Updated the Comments" />
@@ -445,6 +443,7 @@
     <MESSAGE value="TearDown Kubectl services" />
     <MESSAGE value="Added pod to the script" />
     <MESSAGE value="Updated the directories variables and buckets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the directories variables and buckets" />
+    <MESSAGE value="Default config name value assigned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default config name value assigned" />
   </component>
 </project>
