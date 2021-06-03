@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Default config name value assigned">
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,27 +49,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621316076470</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Updated 04_push for the lz inclusion">
-      <created>1621366994443</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1621366994443</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Updated 05 grid export variable">
-      <created>1621367299195</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1621367299195</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Updated 05 grid export variable">
-      <created>1621422639643</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1621422639643</updated>
     </task>
     <task id="LOCAL-00014" summary="Updated 05 grid export variable">
       <created>1621423278666</created>
@@ -393,7 +372,28 @@
       <option name="project" value="LOCAL" />
       <updated>1622698272625</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Default config name value assigned">
+      <created>1622699974923</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1622699974923</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Updated the node sql connect database ip">
+      <created>1622700441461</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1622700441461</updated>
+    </task>
+    <task id="LOCAL-00062" summary="updated config">
+      <created>1622701136851</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1622701136851</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -419,8 +419,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed cd.." />
-    <MESSAGE value="added  cd at the end of push" />
     <MESSAGE value="Updated the Comments" />
     <MESSAGE value="sonar namespace" />
     <MESSAGE value="nmp connect to database" />
@@ -444,6 +442,8 @@
     <MESSAGE value="Added pod to the script" />
     <MESSAGE value="Updated the directories variables and buckets" />
     <MESSAGE value="Default config name value assigned" />
-    <option name="LAST_COMMIT_MESSAGE" value="Default config name value assigned" />
+    <MESSAGE value="Updated the node sql connect database ip" />
+    <MESSAGE value="updated config" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated config" />
   </component>
 </project>

@@ -50,6 +50,7 @@ export SONAR_NAME="sonarqube-1"
 # Kubernetes Services - default namespaces
 export KUBECTL_SONARQUBE="sonarqube"
 export KUBECTL_GRID="zalenium"
+export KUBECTL_GRID_RELEASE="release-zalenium"
 export KUBECTL_MSSQL="mssql-container"
 export KUBECTL_RDASHBAORD="reporting-dashboard"
 
