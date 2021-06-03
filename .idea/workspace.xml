@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Added pod to the script">
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Updated the directories variables and buckets">
+      <change afterPath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/03_lz_create-bucket.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/03_lz_create-bucket.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/09_lz_sonarQube.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/01_tearDown_kubectl-services.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/01_tearDown_kubectl-services.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +50,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621316076470</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated the scripts for bucket creation logics">
-      <created>1621364986603</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1621364986603</updated>
     </task>
     <task id="LOCAL-00009" summary="Upated the rm scripts">
       <created>1621365793044</created>
@@ -397,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622485891406</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Updated the directories variables and buckets">
+      <created>1622577451132</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1622577451132</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -423,7 +420,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SonarQube fix has been done" />
     <MESSAGE value="MSSQL and SONAR and User Messages..." />
     <MESSAGE value="removed cd.." />
     <MESSAGE value="added  cd at the end of push" />
@@ -448,6 +444,7 @@
     <MESSAGE value="SonarQube namespace" />
     <MESSAGE value="TearDown Kubectl services" />
     <MESSAGE value="Added pod to the script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added pod to the script" />
+    <MESSAGE value="Updated the directories variables and buckets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the directories variables and buckets" />
   </component>
 </project>
