@@ -53,6 +53,7 @@ export KUBECTL_GRID="zalenium"
 export KUBECTL_GRID_RELEASE="release-zalenium"
 export KUBECTL_MSSQL="mssql-container"
 export KUBECTL_RDASHBAORD="reporting-dashboard"
+export KUBECTL_FRONTEND_APP="frontend-app"
 
 git config --global user.email a.dinesh1901@gmail.com
 git config --global user.name dinesh-akrishnan
