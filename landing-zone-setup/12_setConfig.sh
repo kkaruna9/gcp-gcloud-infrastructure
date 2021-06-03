@@ -28,3 +28,12 @@ gcloud beta runtime-config configs variables set DEFAULT_APPLICATION_HOST $DEFAU
 
 #gcloud beta runtime-config configs variables get-value DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
 #gcloud beta runtime-config configs variables unset DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
+
+gcloud beta runtime-config configs variables get-value DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
+gcloud beta runtime-config configs variables get-value DEFAULT_GRID_IP --config-name $DEFAULT_CONFIG_NAME
+gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME
+gcloud beta runtime-config configs variables get-value DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME
+gcloud beta runtime-config configs variables get-value DEFAULT_APPLICATION_HOST --config-name $DEFAULT_CONFIG_NAME
+
+
+

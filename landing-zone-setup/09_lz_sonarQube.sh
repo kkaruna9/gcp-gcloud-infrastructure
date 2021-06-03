@@ -12,7 +12,8 @@ kubectl create namespace $KUBECTL_SONARQUBE
 # kubectl describe po -n $KUBECTL_SONARQUBE $KUBECTL_SONARQUBE
 #kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community --requests='cpu=0.75,memory=1250Mi'
 kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community
-kubectl expose pod $KUBECTL_SONARQUBE --port=6002 --target-port=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
+#kubectl expose pod $KUBECTL_SONARQUBE --port=6002 --targetport=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
+kubectl expose pod $KUBECTL_SONARQUBE --port=6002 --targetport=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
 
 
 #helm repo add stable https://charts.helm.sh/stable
