@@ -34,7 +34,7 @@ const sql = require('mssql');
 const config = {
     user: 'sa',
     password: 'Ctsshop@db',
-    server: '104.154.36.119',
+    server: '104.197.114.158',
     options: {
         enableArithAbort: true,
         trustServerCertificate: true

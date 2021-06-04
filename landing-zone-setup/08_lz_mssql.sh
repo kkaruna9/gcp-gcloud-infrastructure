@@ -13,3 +13,5 @@ while [ -z $external_ip ];
 do echo "Please Wait Loading...";
 external_ip=$(kubectl get svc mssql-container --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 [ -z "$external_ip" ] && sleep 10; done; echo "End point ready-" && echo $external_ip; export endpoint=$external_ip
+
+#kubectl get pod mssql-container --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
