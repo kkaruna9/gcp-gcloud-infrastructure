@@ -21,16 +21,15 @@ export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_CLUSTER_QEA="gcp-qea-server"
 export DEFAULT_CLUSTER_APP="gcp-app-server"
+export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
+
+# Host IPs
 export DEFAULT_GRID_IP=""
 export DEFAULT_DASHBOARD_IP=""
 export DEFAULT_MSSQL_IP=""
 export DEFAULT_SONAR_IP=""
-
 export DEFAULT_API_HOST=""
 export DEFAULT_APPLICATION_HOST=""
-export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
-
-
 
 
 # Bucket Variables
@@ -46,7 +45,6 @@ export REPORTS_UITEST="UITest"
 # SonarQube
 export SONAR_NAME="sonarqube-1"
 
-
 # Kubernetes Services - default namespaces
 export KUBECTL_SONARQUBE="sonarqube"
 export KUBECTL_GRID="zalenium"
@@ -55,5 +53,18 @@ export KUBECTL_MSSQL="mssql-container"
 export KUBECTL_RDASHBAORD="reporting-dashboard"
 export KUBECTL_FRONTEND_APP="frontend-app"
 
+
+# Repository
+export REPO_PATH="https://source.developers.google.com/p/"$GOOGLE_CLOUD_PROJECT"/r/"
+export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
+export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
+export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
+export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-functional-assurance"
+export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
+export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
+export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
+
+
+# Default Git
 git config --global user.email a.dinesh1901@gmail.com
 git config --global user.name dinesh-akrishnan

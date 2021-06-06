@@ -6,15 +6,6 @@ echo "
 | (This will take approx. 3-5 minutes.)                                      |
 +----------------------------------------------------------------------------+
 "
-export REPO_PATH="https://source.developers.google.com/p/"$GOOGLE_CLOUD_PROJECT"/r/"
-export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
-export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
-export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
-export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-functional-assurance"
-export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
-export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
-export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
-export PROJECT_ID=$(gcloud config get-value project)
 
 #gsutil -mq cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos .
 #gsutil -mq cp -r gs://$PROJECT_ID/gcpworkshop-code-repos .
@@ -32,9 +23,9 @@ git remote add origin $FRONTEND_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-aut-frontend' repository"
+  echo "Code push success on '$FRONTEND_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-aut-frontend' repository"
+  echo "Failed to push code into '$FRONTEND_REPO' repository"
 fi
 cd ..
 
@@ -48,9 +39,9 @@ git remote add origin $BACKEND_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-aut-backend' repository"
+  echo "Code push success on '$BACKEND_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-aut-backend' repository"
+  echo "Failed to push code into '$BACKEND_REPO' repository"
 fi
 cd ..
 
@@ -63,9 +54,9 @@ git remote add origin $DASHBOARD_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-report-dashboard' repository"
+  echo "Code push success on '$DASHBOARD_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-report-dashboard' repository"
+  echo "Failed to push code into '$DASHBOARD_REPO' repository"
 fi
 cd ..
 
@@ -78,9 +69,9 @@ git remote add origin $FUNCTIONAL_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
+  echo "Code push success on '$FUNCTIONAL_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
+  echo "Failed to push code into '$FUNCTIONAL_REPO' repository"
 fi
 cd ..
 
@@ -93,9 +84,9 @@ git remote add origin $PERFORMANCE_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-tests-performance' repository"
+  echo "Code push success on '$PERFORMANCE_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-tests-performance' repository"
+  echo "Failed to push code into '$PERFORMANCE_REPO' repository"
 fi
 cd ..
 
@@ -108,9 +99,9 @@ git remote add origin $SECURITY_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-tests-security' repository"
+  echo "Code push success on '$SECURITY_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-tests-security' repository"
+  echo "Failed to push code into '$SECURITY_REPO' repository"
 fi
 cd ..
 
@@ -123,9 +114,9 @@ git remote add origin $ACCESSIBILITY_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$LZ_REPOPREFIX-gcp-tests-accessibility' repository"
+  echo "Code push success on '$ACCESSIBILITY_REPO' repository"
 else
-  echo "Failed to push code into '$LZ_REPOPREFIX-gcp-tests-accessibility' repository"
+  echo "Failed to push code into '$ACCESSIBILITY_REPO' repository"
 fi
 
 cd

@@ -34,7 +34,8 @@ const sql = require('mssql');
 const config = {
     user: 'sa',
     password: 'Ctsshop@db',
-    server: '104.197.114.158',
+    // server: '104.197.114.158',
+    server: '$DEFAULT_MSSQL_IP',
     options: {
         enableArithAbort: true,
         trustServerCertificate: true
@@ -47,6 +48,7 @@ useDB();
 
 
 function createDB() {
+    console.log("config.server >>>>>>>>>>>>>>> " +config.server)
     sql.connect(config).then(function () {
         var request = new sql.Request();
         request.query("create database ctsshop").then(function (resp) {

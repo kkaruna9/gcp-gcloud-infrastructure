@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated config">
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated mssql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/04_push_source2workshop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/04_push_source2workshop.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/08_lz_mssql.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/08_lz_mssql.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/10_mssql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/mssql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/11_mssql-connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/11_mssql-connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/12_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/10_setConfig.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,41 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621316076470</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Updated 05 grid export variable">
-      <created>1621423278666</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1621423278666</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Updated 05 grid export variable">
-      <created>1621423315131</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1621423315131</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Updated 05 grid export variable">
-      <created>1621423350813</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1621423350813</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Updated 05 grid export variable">
-      <created>1621661943916</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1621661943916</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Updated 05 grid export variable">
-      <created>1621662232458</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1621662232458</updated>
     </task>
     <task id="LOCAL-00019" summary="Udated the changes for the push repo conflicts">
       <created>1621676635589</created>
@@ -393,7 +362,42 @@
       <option name="project" value="LOCAL" />
       <updated>1622701136851</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="updated config and arguments">
+      <created>1622702219835</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1622702219835</updated>
+    </task>
+    <task id="LOCAL-00064" summary="updated config and arguments">
+      <created>1622703914144</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1622703914144</updated>
+    </task>
+    <task id="LOCAL-00065" summary="updated config and arguments">
+      <created>1622738885612</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1622738885612</updated>
+    </task>
+    <task id="LOCAL-00066" summary="updated sonarport">
+      <created>1622805031051</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1622805031052</updated>
+    </task>
+    <task id="LOCAL-00067" summary="updated mssql">
+      <created>1622805119097</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1622805119097</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -419,9 +423,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated the Comments" />
-    <MESSAGE value="sonar namespace" />
-    <MESSAGE value="nmp connect to database" />
     <MESSAGE value="nmp connect to database - ip address" />
     <MESSAGE value="nmp connect to database - mssql constant" />
     <MESSAGE value="nmp connect to database - show databases query" />
@@ -444,6 +445,9 @@
     <MESSAGE value="Default config name value assigned" />
     <MESSAGE value="Updated the node sql connect database ip" />
     <MESSAGE value="updated config" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated config" />
+    <MESSAGE value="updated config and arguments" />
+    <MESSAGE value="updated sonarport" />
+    <MESSAGE value="updated mssql" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated mssql" />
   </component>
 </project>

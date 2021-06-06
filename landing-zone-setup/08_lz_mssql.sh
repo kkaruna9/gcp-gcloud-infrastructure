@@ -7,7 +7,7 @@ echo "
 "
 
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA --zone $DEFAULT_ZONE --project $PROJECT_ID
-kubectl apply -f  "temp/gcp-gcloud-infrastructure/landing-zone-setup/10_mssql.yml"
+kubectl apply -f  "temp/gcp-gcloud-infrastructure/landing-zone-setup/mssql.yml"
 bash -c external_ip="";
 while [ -z $external_ip ];
 do echo "Please Wait Loading...";
