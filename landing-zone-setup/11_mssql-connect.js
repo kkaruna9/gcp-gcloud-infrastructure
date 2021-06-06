@@ -36,6 +36,7 @@ const config = {
     password: 'Ctsshop@db',
     // server: '104.197.114.158',
     server: '$DEFAULT_MSSQL_IP',
+    console.log("config.server >>>>>>>>>>>>>>> " +server)
     options: {
         enableArithAbort: true,
         trustServerCertificate: true
