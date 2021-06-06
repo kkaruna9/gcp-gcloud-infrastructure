@@ -31,11 +31,12 @@ sh.exec(`export myorganization=${organizationName}`, {async: false, silent:true}
 
 var sh = require('shelljs');
 const sql = require('mssql');
+var mssqlIp = sh.exec('gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME').stdout;
 const config = {
     user: 'sa',
     password: 'Ctsshop@db',
     // server: '104.197.114.158',
-    server: sh.exec('gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME').stdout,
+    server: mssqlIp,
     options: {
         enableArithAbort: true,
         trustServerCertificate: true
