@@ -35,7 +35,7 @@ const config = {
     user: 'sa',
     password: 'Ctsshop@db',
     // server: '104.197.114.158',
-    server: sh.exec('echo $DEFAULT_MSSQL_IP',{silent:true}).stdout,
+    server: sh.exec('gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME').stdout;
     options: {
         enableArithAbort: true,
         trustServerCertificate: true
