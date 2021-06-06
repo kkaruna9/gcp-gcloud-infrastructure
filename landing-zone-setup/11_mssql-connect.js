@@ -29,7 +29,7 @@ sh.exec(`export myorganization=${organizationName}`, {async: false, silent:true}
 
 
 
-
+var sh = require('shelljs');
 const sql = require('mssql');
 const config = {
     user: 'sa',
