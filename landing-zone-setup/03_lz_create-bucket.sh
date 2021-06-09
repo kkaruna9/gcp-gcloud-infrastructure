@@ -32,7 +32,7 @@ echo "
 #gsutil cp gs://gd-investments-1000311198.appspot.com gs://artifacts.$PROJECT_ID/gcpworkshop-code-repos
 #-p $PROJECT_ID -c $DEFAULT_BUCKET_STORAGE_CLASS -l $DEFAULT_REGION
 
-
+gsutil mb gs://$DEFAULT_BUCKET_REPORTS_DEST
 gsutil cp -r gs://$DEFAULT_BUCKET_REPORTS_SOURCE gs://$DEFAULT_BUCKET_REPORTS_DEST
 #gsutil -m  rm -r gs://lz-dines-test/gcp-workshop-reports/*.txt
 #gsutil -m  rm -r gs://lz-dines-test/gcp-workshop-reports/FunctionalAssurance/*.txt
