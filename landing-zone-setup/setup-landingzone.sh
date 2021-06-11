@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "
 +----------------------------------------------------------------------------+
-|                   GCP Environment Setup                            |
+|                   GCP - OneShot - Infrastructure Setup                     |
 +----------------------------------------------------------------------------+
 "
 rm -rf temp/
@@ -17,6 +17,4 @@ source temp/gcp-gcloud-infrastructure/landing-zone-setup/06_lz_create_container_
 source temp/gcp-gcloud-infrastructure/landing-zone-setup/07_lz_create-report-dashboard.sh
 source temp/gcp-gcloud-infrastructure/landing-zone-setup/08_lz_mssql.sh
 source temp/gcp-gcloud-infrastructure/landing-zone-setup/09_lz_sonarQube.sh
-source temp/gcp-gcloud-infrastructure/landing-zone-setup/10_setConfig.sh
-npm install shelljs
-node temp/gcp-gcloud-infrastructure/landing-zone-setup/11_mssql-connect.js
+
