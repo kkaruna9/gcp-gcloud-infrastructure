@@ -39,7 +39,6 @@ gcloud beta runtime-config configs variables set DEFAULT_GRID_IP $DEFAULT_GRID_I
 gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 
-
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
 #DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 #echo "DEFAULT_APPLICATION_HOST = "$DEFAULT_APPLICATION_HOST
