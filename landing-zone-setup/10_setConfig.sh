@@ -40,24 +40,22 @@ gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 
 
-
-
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
-DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
-echo "DEFAULT_APPLICATION_HOST = "$DEFAULT_APPLICATION_HOST
-DEFAULT_API_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
-echo "DEFAULT_API_HOST = "$DEFAULT_API_HOST
-gcloud beta runtime-config configs variables set DEFAULT_APPLICATION_HOST $DEFAULT_APPLICATION_HOST --config-name $DEFAULT_CONFIG_NAME --is-text
-gcloud beta runtime-config configs variables set DEFAULT_API_HOST $DEFAULT_API_HOST --config-name $DEFAULT_CONFIG_NAME --is-text
+#gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
+#DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+#echo "DEFAULT_APPLICATION_HOST = "$DEFAULT_APPLICATION_HOST
+#DEFAULT_API_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+#echo "DEFAULT_API_HOST = "$DEFAULT_API_HOST
+#gcloud beta runtime-config configs variables set DEFAULT_APPLICATION_HOST $DEFAULT_APPLICATION_HOST --config-name $DEFAULT_CONFIG_NAME --is-text
+#gcloud beta runtime-config configs variables set DEFAULT_API_HOST $DEFAULT_API_HOST --config-name $DEFAULT_CONFIG_NAME --is-text
 
 # --------gcloud config get runtime variables values
 #gcloud beta runtime-config configs variables get-value DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
 #gcloud beta runtime-config configs variables unset DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
-gcloud beta runtime-config configs variables get-value DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
-gcloud beta runtime-config configs variables get-value DEFAULT_GRID_IP --config-name $DEFAULT_CONFIG_NAME
-gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME
-gcloud beta runtime-config configs variables get-value DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME
-gcloud beta runtime-config configs variables get-value DEFAULT_APPLICATION_HOST --config-name $DEFAULT_CONFIG_NAME
+#gcloud beta runtime-config configs variables get-value DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME
+#gcloud beta runtime-config configs variables get-value DEFAULT_GRID_IP --config-name $DEFAULT_CONFIG_NAME
+#gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME
+#gcloud beta runtime-config configs variables get-value DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME
+#gcloud beta runtime-config configs variables get-value DEFAULT_APPLICATION_HOST --config-name $DEFAULT_CONFIG_NAME
 
 
 

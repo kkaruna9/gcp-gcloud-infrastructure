@@ -71,3 +71,6 @@ export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 # Default Git
 git config --global user.email a.dinesh1901@gmail.com
 git config --global user.name dinesh-akrishnan
+
+npm install mssql
+npm install shelljs
