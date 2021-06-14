@@ -16,7 +16,7 @@ echo "
 
 # Common  Variables
 export PROJECT_ID=$(gcloud config get-value project)
-export LZ_REPOPREFIX="lz-repo-2"
+export LZ_REPOPREFIX="lz-repo-3"
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_CLUSTER_QEA="gcp-qea-server"
