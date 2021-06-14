@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="Cluster version">
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="commented the app and api host">
+      <change afterPath="$PROJECT_DIR$/execute-functional.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pre-build-qa.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/00_lz_environment-variables.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing-zone-setup/10_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/10_setConfig.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-setup/01_lz_create_kubectl_clusters.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-setup/setup-landingzone.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup-landingzone.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" beforeDir="false" afterPath="$PROJECT_DIR$/landing-zone-teardown/00_Cleanup_and_check.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="15" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/landing-zone" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
@@ -37,6 +43,7 @@
       <recent name="$PROJECT_DIR$/landing-zone" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/To_Clean" />
       <recent name="$PROJECT_DIR$/landing-zone-teardown" />
     </key>
@@ -49,20 +56,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621316076470</updated>
-    </task>
-    <task id="LOCAL-00030" summary="sonar namespace">
-      <created>1621800662976</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1621800662976</updated>
-    </task>
-    <task id="LOCAL-00031" summary="sonar namespace">
-      <created>1621802951325</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1621802951325</updated>
     </task>
     <task id="LOCAL-00032" summary="nmp connect to database">
       <created>1622004521955</created>
@@ -393,7 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623407443957</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="commented the app and api host">
+      <created>1623492925082</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1623492925083</updated>
+    </task>
+    <task id="LOCAL-00080" summary="commented the app and api host">
+      <created>1623493004339</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1623493004339</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -449,7 +456,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nmp connect to database - show data" />
     <MESSAGE value="added npm console - log" />
     <MESSAGE value="added npm console - ipaddress" />
     <MESSAGE value="added npm console - options" />
@@ -474,6 +480,7 @@
     <MESSAGE value="js file update" />
     <MESSAGE value="bucket storage" />
     <MESSAGE value="Cluster version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cluster version" />
+    <MESSAGE value="commented the app and api host" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented the app and api host" />
   </component>
 </project>

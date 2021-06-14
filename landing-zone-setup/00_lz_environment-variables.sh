@@ -67,6 +67,9 @@ export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
 export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 
+export PRE_BUILD_QA="landing-zone-pre-buildQA"
+export PRE_BUILD_QA_DEST_LOCAL_PATH="temp/landing-zone-pre-buildQA"
+
 
 # Default Git
 git config --global user.email a.dinesh1901@gmail.com
@@ -74,3 +77,5 @@ git config --global user.name dinesh-akrishnan
 
 npm install mssql
 npm install shelljs
+
+gcloud beta runtime-config configs delete $DEFAULT_CONFIG_NAME

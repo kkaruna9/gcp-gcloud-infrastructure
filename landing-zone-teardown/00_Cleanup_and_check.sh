@@ -5,3 +5,5 @@ rm -rf temp
 
 
 gcloud beta runtime-config configs delete $DEFAULT_CONFIG_NAME
+
+gcloud config list
