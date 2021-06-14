@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "
 +----------------------------------------------------------------------------+
 | Teardown GCP Components, Services, Buckets, Servers and repositories.      |

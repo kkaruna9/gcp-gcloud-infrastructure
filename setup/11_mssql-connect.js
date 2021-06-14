@@ -13,22 +13,6 @@ sh.exec(`export myorganization=${organizationName}`, {async: false, silent:true}
 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var sh = require('shelljs');
 const sql = require('mssql');
 var mssqlIp = sh.exec('gcloud beta runtime-config configs variables get-value DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME').stdout;

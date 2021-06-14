@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "
 +----------------------------------------------------------------------------+
-| Enabling containerregistry services in the '$PROJECT_ID '.                 |
+|                   Enabling container registry services                     |
 +----------------------------------------------------------------------------+
 "
 gcloud services enable containerregistry.googleapis.com

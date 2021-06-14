@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "
 +----------------------------------------------------------------------------+
-| Creating cloud source repositories for the '$PROJECT_ID '.                 |
+|                         Creating cloud source repositories                 |
 +----------------------------------------------------------------------------+
 "
 

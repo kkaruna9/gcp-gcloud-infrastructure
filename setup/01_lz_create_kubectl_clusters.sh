@@ -2,7 +2,7 @@
 
 echo "
 +----------------------------------------------------------------------------+
-| Creating Kubernetes clusters for the workshop                      |
+|               Creating Kubernetes clusters for the workshop                |
 +----------------------------------------------------------------------------+
 "
 
