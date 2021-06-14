@@ -8,6 +8,7 @@ rm -rf temp/
 mkdir temp && cd temp && git clone https://github.com/dinesh-akrishnan/gcp-gcloud-infrastructure.git && cd ..
 source temp/gcp-gcloud-infrastructure/setup/00_lz_environment-variables.sh
 source temp/gcp-gcloud-infrastructure/setup/01_lz_create_kubectl_clusters.sh
+
 export LZ_REPOPREFIX="lz-repo-3"
 source temp/gcp-gcloud-infrastructure/setup/02_lz_create-repo.sh
 source temp/gcp-gcloud-infrastructure/setup/03_lz_create-bucket.sh
