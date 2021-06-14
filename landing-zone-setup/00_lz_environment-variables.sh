@@ -78,4 +78,4 @@ git config --global user.name dinesh-akrishnan
 npm install mssql
 npm install shelljs
 
-gcloud beta runtime-config configs delete $DEFAULT_CONFIG_NAME
+
