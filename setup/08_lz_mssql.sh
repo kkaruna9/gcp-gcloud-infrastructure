@@ -8,6 +8,8 @@ echo "
 "
 
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA --zone $DEFAULT_ZONE --project $PROJECT_ID
+kubectl create namespace $KUBECTL_MSSQL
+kubectl get namespace
 kubectl apply -f  "temp/gcp-gcloud-infrastructure/setup/mssql.yml"
 bash -c external_ip="";
 while [ -z $external_ip ];
