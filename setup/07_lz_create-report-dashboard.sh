@@ -16,7 +16,6 @@ gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA --zone $DEFAULT_Z
 kubectl create namespace $KUBECTL_RDASHBAORD
 kubectl run $KUBECTL_RDASHBAORD --image=karthiknarayanpdec11/reporting-dashboard:latest
 kubectl expose pod $KUBECTL_RDASHBAORD --port=3337 --target-port=3337 --name=$KUBECTL_RDASHBAORD --type=LoadBalancer
-kubectl get service
 
 bash -c external_ip="";
 while [ -z $external_ip ];
