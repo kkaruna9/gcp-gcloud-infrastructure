@@ -19,7 +19,8 @@ kubectl get service release-zalenium --namespace=$KUBECTL_GRID
 bash -c external_ip="";
 while [ -z $external_ip ];
 do echo "Please Wait release-zalenium Loading...";
-external_ip=$(kubectl get svc release-zalenium --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+
+external_ip=$(kubectl get svc release-zalenium --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 [ -z "$external_ip" ] && sleep 10; done; echo "End point ready-" && echo $external_ip; export endpoint=$external_ip
 
 
