@@ -44,9 +44,3 @@ spec:
       targetPort: 1433
   type: LoadBalancer
 ---
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: mssql-container
-  labels:
-    name: mssql-container
