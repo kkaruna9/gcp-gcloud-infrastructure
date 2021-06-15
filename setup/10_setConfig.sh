@@ -40,16 +40,6 @@ gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 
 
-node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
-
-
-
-
-
-
-
-
-
 
 
 

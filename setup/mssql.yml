@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   name: mssql-container
 spec:
-  replicas: 1
+  replicas-min: "2"
+  replicas-max: "5"
   selector:
     matchLabels:
       app: mssql-container

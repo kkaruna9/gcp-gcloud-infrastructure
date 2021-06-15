@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated the yaml">
+      <change beforePath="$PROJECT_DIR$/setup-landingzone.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup-landingzone.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/05_lz_spin_grid_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/05_lz_spin_grid_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/07_lz_create-report-dashboard.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/07_lz_create-report-dashboard.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/08_lz_mssql.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/08_lz_mssql.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/09_lz_sonarQube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/09_lz_sonarQube.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/10_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/10_setConfig.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/mssql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/setup/mssql.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="updated the namespace for the kubectl service">
+      <created>1623746281282</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623746281282</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated the namespace for the kubectl service">
+      <created>1623752042799</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623752042799</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated the namespace for the kubectl service">
+      <created>1623753603422</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623753603422</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated the namespace for the kubectl service">
+      <created>1623754086449</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623754086449</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated the namespace for the kubectl service - mssql">
+      <created>1623755434759</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623755434759</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated the namespace for the kubectl service - mssql, sonar, dashboard">
+      <created>1623756109825</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623756109825</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated the namespace for the kubectl service - mssql, sonar, dashboard">
+      <created>1623756918334</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623756918334</updated>
+    </task>
+    <task id="LOCAL-00008" summary="delete kubernetes namespace">
+      <created>1623757136079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623757136079</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated the setconfig">
+      <created>1623758236192</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623758236192</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated the yaml">
+      <created>1623759401533</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623759401533</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated the namespace for the kubectl service" />
+    <MESSAGE value="updated the namespace for the kubectl service - mssql" />
+    <MESSAGE value="updated the namespace for the kubectl service - mssql, sonar, dashboard" />
+    <MESSAGE value="delete kubernetes namespace" />
+    <MESSAGE value="updated the setconfig" />
+    <MESSAGE value="updated the yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the yaml" />
+  </component>
+</project>
