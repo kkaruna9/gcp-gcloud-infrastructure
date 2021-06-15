@@ -50,12 +50,15 @@ else
 fi
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Namespaces >>>>>>>>>>>>>>>>>>>>>>>"
-gcloud container clusters delete $DEFAULT_CLUSTER_QEA --region=$DEFAULT_ZONE
+kubectl delete namespace $KUBECTL_GRID
+kubectl delete namespace $KUBECTL_RDASHBAORD
+kubectl delete namespace $KUBECTL_MSSQL
+kubectl delete namespace $KUBECTL_SONARQUBE
 if [ $? -eq 0 ]
 then
-  echo "Cluster Deleted Successfully  '$DEFAULT_CLUSTER_QEA'"
+  echo "Kubernetes  namespaces Deleted successfully "
 else
-  echo "Failed to Delete Cluster '$DEFAULT_CLUSTER_QEA"
+  echo "Failed to Delete Kubernetes  namespaces"
 fi
 
 
