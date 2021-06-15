@@ -29,7 +29,7 @@ DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONAR
 echo "DEFAULT_SONAR_IP = "$DEFAULT_SONAR_IP
 DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_GRID_IP = "$DEFAULT_GRID_IP
-DEFAULT_MSSQL_IP=$(kubectl get svc $KUBECTL_MSSQL --namespace=$KUBECTL_MSSQL --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_MSSQL_IP=$(kubectl get svc $KUBECTL_MSSQL --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_MSSQL_IP = "$DEFAULT_MSSQL_IP
 DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_DASHBOARD_IP = "$DEFAULT_DASHBOARD_IP
