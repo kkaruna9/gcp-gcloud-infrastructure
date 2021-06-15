@@ -12,13 +12,13 @@ kubectl create namespace $KUBECTL_SONARQUBE
 kubectl get namespace
 # kubectl describe po -n $KUBECTL_SONARQUBE $KUBECTL_SONARQUBE
 #kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community --requests='cpu=0.75,memory=1250Mi'
-kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community
+kubectl run $KUBECTL_SONARQUBE --image=sonarqube:7.5-community --namespace=$KUBECTL_SONARQUBE
 #kubectl expose pod $KUBECTL_SONARQUBE --port=6002 --targetport=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
-kubectl expose pod $KUBECTL_SONARQUBE --port=6002 --target-port=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
+kubectl expose pod $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --port=6002 --target-port=9000 --name=$KUBECTL_SONARQUBE --type=LoadBalancer
 bash -c external_ip="";
 while [ -z $external_ip ];
 do echo "Please Wait '$KUBECTL_SONARQUBE' Loading...";
-external_ip=$(kubectl get svc $KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+external_ip=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 [ -z "$external_ip" ] && sleep 15; done; echo "End point ready-" && echo $external_ip; export endpoint=$external_ip
 
 

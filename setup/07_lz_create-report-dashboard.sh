@@ -15,11 +15,11 @@ echo "
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA --zone $DEFAULT_ZONE --project $PROJECT_ID
 kubectl create namespace $KUBECTL_RDASHBAORD
 kubectl get namespace
-kubectl run $KUBECTL_RDASHBAORD --image=karthiknarayanpdec11/reporting-dashboard:latest
-kubectl expose pod $KUBECTL_RDASHBAORD --port=3337 --target-port=3337 --name=$KUBECTL_RDASHBAORD --type=LoadBalancer
+kubectl run $KUBECTL_RDASHBAORD --image=karthiknarayanpdec11/reporting-dashboard:latest --namespace=$KUBECTL_RDASHBAORD
+kubectl expose pod $KUBECTL_RDASHBAORD --port=3337 --target-port=3337 --name=$KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --type=LoadBalancer
 
 bash -c external_ip="";
 while [ -z $external_ip ];
 do echo "Please Wait '$KUBECTL_RDASHBAORD' Loading...";
-external_ip=$(kubectl get svc $KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+external_ip=$(kubectl get svc $KUBECTL_RDASHBAORD  --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 [ -z "$external_ip" ] && sleep 15; done; echo "End point ready-" && echo $external_ip; export endpoint=$external_ip
