@@ -49,6 +49,16 @@ else
   echo "Failed to Delete Storage bucket '$DEFAULT_BUCKET_REPORTS_DEST"
 fi
 
+echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Namespaces >>>>>>>>>>>>>>>>>>>>>>>"
+gcloud container clusters delete $DEFAULT_CLUSTER_QEA --region=$DEFAULT_ZONE
+if [ $? -eq 0 ]
+then
+  echo "Cluster Deleted Successfully  '$DEFAULT_CLUSTER_QEA'"
+else
+  echo "Failed to Delete Cluster '$DEFAULT_CLUSTER_QEA"
+fi
+
+
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Cluster >>>>>>>>>>>>>>>>>>>>>>>"
 gcloud container clusters delete $DEFAULT_CLUSTER_QEA --region=$DEFAULT_ZONE
 if [ $? -eq 0 ]

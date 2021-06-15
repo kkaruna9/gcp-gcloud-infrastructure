@@ -21,5 +21,5 @@ kubectl expose pod $KUBECTL_RDASHBAORD --port=3337 --target-port=3337 --name=$KU
 bash -c external_ip="";
 while [ -z $external_ip ];
 do echo "Please Wait '$KUBECTL_RDASHBAORD' Loading...";
-external_ip=$(kubectl get svc $KUBECTL_RDASHBAORD  --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+external_ip=$(kubectl get svc $KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 [ -z "$external_ip" ] && sleep 15; done; echo "End point ready-" && echo $external_ip; export endpoint=$external_ip
