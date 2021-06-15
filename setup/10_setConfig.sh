@@ -25,13 +25,13 @@ gcloud beta runtime-config configs variables set SECURITY_REPO $SECURITY_REPO --
 gcloud beta runtime-config configs variables set ACCESSIBILITY_REPO $ACCESSIBILITY_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 
 
-DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_SONAR_IP = "$DEFAULT_SONAR_IP
 DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_GRID_IP = "$DEFAULT_GRID_IP
-DEFAULT_MSSQL_IP=$(kubectl get svc $KUBECTL_MSSQL --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_MSSQL_IP=$(kubectl get svc $KUBECTL_MSSQL --namespace=$KUBECTL_MSSQL --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_MSSQL_IP = "$DEFAULT_MSSQL_IP
-DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_DASHBOARD_IP = "$DEFAULT_DASHBOARD_IP
 # --------gcloud kubernetes set environment variables values for Server Instances
 gcloud beta runtime-config configs variables set DEFAULT_SONAR_IP $DEFAULT_SONAR_IP --config-name $DEFAULT_CONFIG_NAME --is-text
