@@ -15,7 +15,6 @@ export KUBECTL_RDASHBAORD="reporting-dashboard"
 export KUBECTL_FRONTEND_APP="frontend-app"
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
-export LZ_REPOPREFIX="lz-repo-3"
 export DEFAULT_BUCKET_REPORTS_DEST="lz-reportsqea-sandbox"
 
 
