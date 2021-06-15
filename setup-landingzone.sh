@@ -18,6 +18,13 @@ source temp/gcp-gcloud-infrastructure/setup/05_lz_spin_grid_server.sh
 source temp/gcp-gcloud-infrastructure/setup/09_lz_sonarQube.sh
 source temp/gcp-gcloud-infrastructure/setup/07_lz_create-report-dashboard.sh
 
+
+export KUBECTL_SONARQUBE="sonarqube"
+export KUBECTL_GRID="zalenium"
+export KUBECTL_GRID_RELEASE="release-zalenium"
+export KUBECTL_MSSQL="mssql-container"
+export KUBECTL_RDASHBAORD="reporting-dashboard"
+
 bash -c z_external_ip="";
 while [ -z $z_external_ip ];
 do echo "Please Wait release-zalenium Loading...";
