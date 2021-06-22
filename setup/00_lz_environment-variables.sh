@@ -20,7 +20,7 @@ export LZ_REPOPREFIX="lz-repo-3"
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_CLUSTER_QEA="gcp-qea-server"
-export DEFAULT_CLUSTER_VERSION="1.19.9-gke.1900"
+export DEFAULT_CLUSTER_VERSION="1.18.17-gke.1901"
 export DEFAULT_CLUSTER_APP="gcp-app-server"
 export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
 
