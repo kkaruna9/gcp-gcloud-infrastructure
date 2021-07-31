@@ -42,7 +42,13 @@ gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 
 
-
+curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
+    "seleniumgridIP": "'$DEFAULT_GRID_IP'",
+     "projectName": "QEA-Sandbox",
+     "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
+     "organizationName": "lz-reportsqea-sandbox",
+     "frontendDevIP" : "35.192.207.71"
+}'
 
 
 
