@@ -47,7 +47,6 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
      "projectName": "QEA-Sandbox",
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "lz-reportsqea-sandbox",
-     "frontendDevIP" : "35.192.207.71"
 }'
 
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
