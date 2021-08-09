@@ -68,8 +68,6 @@ export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
 export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 
-export PRE_BUILD_QA="landing-zone-pre-buildQA"
-export PRE_BUILD_QA_DEST_LOCAL_PATH="temp/landing-zone-pre-buildQA"
 
 
 # Default Git

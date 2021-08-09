@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated the yaml">
-      <change beforePath="$PROJECT_DIR$/setup-landingzone.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup-landingzone.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/05_lz_spin_grid_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/05_lz_spin_grid_server.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/07_lz_create-report-dashboard.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/07_lz_create-report-dashboard.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/08_lz_mssql.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/08_lz_mssql.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/09_lz_sonarQube.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/09_lz_sonarQube.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/10_setConfig.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/10_setConfig.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/mssql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/setup/mssql.yml" afterDir="false" />
+    <list default="true" id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated the curl request by removing the frontend from landing zone">
+      <change afterPath="$PROJECT_DIR$/setup/12_prebuild.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/13_postbuildqa.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/14_functionalqa.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/15_experienceqa.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021,_09_20_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021__09_20__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/execute-functional.sh" beforeDir="false" afterPath="$PROJECT_DIR$/execute-functional.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre-build-qa.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/00_lz_environment-variables.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/00_lz_environment-variables.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1wBBCVyHFnUxzmTUlaXcegf73UV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="updated the namespace for the kubectl service">
       <created>1623746281282</created>
@@ -89,7 +102,28 @@
       <option name="project" value="LOCAL" />
       <updated>1623759401533</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a30d6abc-f27a-4b16-bf78-a83bb2a37306" name="Default Changelist" comment="updated the yaml" />
+      <created>1627921973232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627921973232</updated>
+    </task>
+    <task id="LOCAL-00011" summary="updated the curl request by removing the frontend from landing zone">
+      <created>1627925135914</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1627925135914</updated>
+    </task>
+    <task id="LOCAL-00012" summary="updated the curl request by removing the frontend from landing zone">
+      <created>1627928489635</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1627928489635</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +150,7 @@
     <MESSAGE value="delete kubernetes namespace" />
     <MESSAGE value="updated the setconfig" />
     <MESSAGE value="updated the yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the yaml" />
+    <MESSAGE value="updated the curl request by removing the frontend from landing zone" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the curl request by removing the frontend from landing zone" />
   </component>
 </project>
