@@ -23,5 +23,5 @@ gcloud source repos clone $PRE_BUILD_BACKEND_QA $PRE_BUILD_BACKEND_QA_DEST_LOCAL
 gcloud source repos clone $PRE_BUILD_LANDINGZONE_QA $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
 
 source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/create_triggers_in_cloud_build.sh
-source  $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/run-bvt-with-mock-services.sh
+source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/run-bvt-with-mock-services.sh
 
