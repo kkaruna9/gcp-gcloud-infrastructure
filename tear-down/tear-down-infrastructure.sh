@@ -49,17 +49,17 @@ else
   echo "Failed to Delete Storage bucket '$DEFAULT_BUCKET_REPORTS_DEST"
 fi
 
-echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Namespaces >>>>>>>>>>>>>>>>>>>>>>>"
-kubectl delete namespace $KUBECTL_GRID
-kubectl delete namespace $KUBECTL_RDASHBAORD
-kubectl delete namespace $KUBECTL_MSSQL
-kubectl delete namespace $KUBECTL_SONARQUBE
-if [ $? -eq 0 ]
-then
-  echo "Kubernetes  namespaces Deleted successfully "
-else
-  echo "Failed to Delete Kubernetes  namespaces"
-fi
+#echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Namespaces >>>>>>>>>>>>>>>>>>>>>>>"
+#kubectl delete namespace $KUBECTL_GRID
+#kubectl delete namespace $KUBECTL_RDASHBAORD
+#kubectl delete namespace $KUBECTL_MSSQL
+#kubectl delete namespace $KUBECTL_SONARQUBE
+#if [ $? -eq 0 ]
+#then
+#  echo "Kubernetes  namespaces Deleted successfully "
+#else
+ # echo "Failed to Delete Kubernetes  namespaces"
+#fi
 
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Cluster >>>>>>>>>>>>>>>>>>>>>>>"
