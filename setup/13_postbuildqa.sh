@@ -7,7 +7,7 @@ echo "
 "
 
 export POST_BUILD_FRONTEND_QA="gcp-frontend"
-export PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH="temp/gcp-backend"
+export PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH="temp/gcp-frontend"
 export PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH="temp/landing-zone-pre-buildQA"
 
 gcloud source repos clone $POST_BUILD_FRONTEND_QA $PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
