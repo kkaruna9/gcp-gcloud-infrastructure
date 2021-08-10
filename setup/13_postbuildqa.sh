@@ -7,10 +7,11 @@ echo "
 "
 
 export POST_BUILD_FRONTEND_QA="gcp-frontend"
-export POST_BUILD_FRONTEND_QA_DEST_LOCAL_PATH="temp/landing-zone-pre-buildQA"
+export PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH="temp/gcp-backend"
+export PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH="temp/landing-zone-pre-buildQA"
 
-gcloud source repos clone $POST_BUILD_FRONTEND_QA $POST_BUILD_FRONTEND_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
-source $POST_BUILD_FRONTEND_QA_DEST_LOCAL_PATH/deploy-services-frontend-to-gke.sh
+gcloud source repos clone $POST_BUILD_FRONTEND_QA $PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
+source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/deploy-services-frontend-to-gke.sh
 
 
 export LANDING_ZONE_FUNCTIONAL="landing-zone-functional"
