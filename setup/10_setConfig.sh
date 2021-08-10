@@ -28,7 +28,8 @@ gcloud beta runtime-config configs variables set ACCESSIBILITY_REPO $ACCESSIBILI
 #DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_SONAR_IP = "$DEFAULT_SONAR_IP
-DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+#DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_GRID_IP = "$DEFAULT_GRID_IP
 DEFAULT_MSSQL_IP=$(kubectl get svc $KUBECTL_MSSQL --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 echo "DEFAULT_MSSQL_IP = "$DEFAULT_MSSQL_IP
