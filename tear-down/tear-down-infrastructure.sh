@@ -17,6 +17,27 @@ export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_BUCKET_REPORTS_DEST="lz-reportsqea-sandbox"
 
+echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP build tears >>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+gcloud beta builds triggers delete gcp-frontend-trigger -q
+gcloud beta builds triggers delete gcp-backend-trigger -q
+gcloud beta builds triggers delete gcp-postbuild-trigger -q
+gcloud beta builds triggers delete gcp-bvt-trigger -q
+gcloud beta builds triggers delete gcp-functional-SmokeTest -q
+gcloud beta builds triggers delete gcp-functional-UITest -q
+gcloud beta builds triggers delete gcp-functional-APITest -q
+gcloud beta builds triggers delete gcp-functional-UIRWDTest -q
+gcloud beta builds triggers delete gcp-experience-SecurityTest -q
+gcloud beta builds triggers delete gcp-experience-AccessibilityTest -q
+gcloud beta builds triggers delete gcp-experience-PerformanceTest -q
+
+if [ $? -eq 0 ]
+then
+  echo "Deleted All the Triggers Successfully"
+else
+  echo "Failed to Delete Triggers"
+fi
+
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Configuration >>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 gcloud beta runtime-config configs delete $DEFAULT_CONFIG_NAME
