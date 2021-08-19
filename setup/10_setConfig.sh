@@ -45,7 +45,7 @@ gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_D
 
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",
-     "projectName": "QEA-Sandbox",
+     "projectName": "'$(gcloud config get-value project)'",
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "lz-reportsqea-sandbox"
 }'
