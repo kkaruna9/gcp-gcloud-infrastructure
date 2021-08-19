@@ -49,7 +49,6 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "lz-reportsqea-sandbox"
 }'
-
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
 #DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 #echo "DEFAULT_APPLICATION_HOST = "$DEFAULT_APPLICATION_HOST
