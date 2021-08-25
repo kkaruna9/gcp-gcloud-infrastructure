@@ -15,7 +15,8 @@ echo "
 #  source sh ./00_lz_environment-variables.sh
 
 # Common  Variables
-  export PROJECT_ID=$(gcloud config get-value project)
+
+export PROJECT_ID=$(gcloud config get-value project)
 export LZ_REPOPREFIX="lz-repo-3"
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
@@ -38,7 +39,7 @@ export DEFAULT_BUCKET_STORAGE_CLASS="STANDARD"
 export DEFAULT_BUCKET_REPO="lz-artifacts-"
 #export DEFAULT_BUCKET_REPORTS="lz-reports"
 export DEFAULT_BUCKET_REPORTS_SOURCE="lz-artifacts-qea-sandbox/gcp-workshop-reports"
-export DEFAULT_BUCKET_REPORTS_DEST="lz-reportsqea-sandbox"
+export DEFAULT_BUCKET_REPORTS_DEST="reportsqea"
 #export LZ_BUCKET_NAME="lz-results" should be dynamically changed
 export LZ_BUCKET_NAME="lz-reportsqea-sandbox"
 export REPORTS_APITEST="APITest"
