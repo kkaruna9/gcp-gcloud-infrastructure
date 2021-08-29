@@ -17,7 +17,6 @@ echo "
 # Common  Variables
 
 export PROJECT_ID=$(gcloud config get-value project)
-export LZ_REPOPREFIX="lz-repo-3"
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_CLUSTER_QEA="gcp-qea-server"
@@ -62,6 +61,7 @@ export KUBECTL_FRONTEND_APP="frontend-app"
 
 # Repository
 export REPO_PATH="https://source.developers.google.com/p/"$GOOGLE_CLOUD_PROJECT"/r/"
+export LZ_REPOPREFIX=$PROJECT_ID
 export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
 export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
 export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
