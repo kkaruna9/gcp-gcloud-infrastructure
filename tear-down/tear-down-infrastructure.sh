@@ -15,7 +15,7 @@ export KUBECTL_RDASHBAORD="reporting-dashboard"
 export KUBECTL_FRONTEND_APP="frontend-app"
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
-export DEFAULT_BUCKET_REPORTS_DEST="lz-reportsqea-sandbox"
+export DEFAULT_BUCKET_REPORTS_DEST=$BUCKET_ID
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP build tears >>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
