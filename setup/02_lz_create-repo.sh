@@ -29,6 +29,22 @@ else
   echo "Failed to create '$LZ_REPOPREFIX-gcp-aut-backend' repository"
 fi
 
+gcloud -q source repos create $LZ_REPOPREFIX-gcp-frontend
+if [ $? -eq 0 ]
+then
+  echo "Created '$LZ_REPOPREFIX-gcp-frontend' repository"
+else
+  echo "Failed to create '$LZ_REPOPREFIX-gcp-frontend' repository"
+fi
+
+gcloud -q source repos create $LZ_REPOPREFIX-gcp-backend
+if [ $? -eq 0 ]
+then
+  echo "Created '$LZ_REPOPREFIX-gcp-backend' repository"
+else
+  echo "Failed to create '$LZ_REPOPREFIX-gcp-backend' repository"
+fi
+
 gcloud -q source repos create $LZ_REPOPREFIX-gcp-report-dashboard
 if [ $? -eq 0 ]
 then

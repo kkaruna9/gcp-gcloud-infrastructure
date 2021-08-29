@@ -30,6 +30,22 @@ else
   echo "Failed to delete '$LZ_REPOPREFIX-gcp-aut-backend' repository"
 fi
 
+gcloud -q source repos delete $LZ_REPOPREFIX-gcp-backend
+if [ $? -eq 0 ]
+then
+  echo "Deleted '$LZ_REPOPREFIX-gcp-backend' repository"
+else
+  echo "Failed to delete '$LZ_REPOPREFIX-gcp-backend' repository"
+fi
+
+gcloud -q source repos delete $LZ_REPOPREFIX-gcp-frontend
+if [ $? -eq 0 ]
+then
+  echo "Deleted '$LZ_REPOPREFIX-gcp-backend' repository"
+else
+  echo "Failed to delete '$LZ_REPOPREFIX-gcp-backend' repository"
+fi
+
 gcloud -q source repos delete $LZ_REPOPREFIX-gcp-report-dashboard
 if [ $? -eq 0 ]
 then
