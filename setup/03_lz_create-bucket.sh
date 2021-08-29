@@ -31,7 +31,7 @@ echo "
 #gsutil cp -r gs://lz-reportsqea-sandbox gs://lz-dines-test/
 #gsutil cp gs://gd-investments-1000311198.appspot.com gs://artifacts.$PROJECT_ID/gcpworkshop-code-repos
 #-p $PROJECT_ID -c $DEFAULT_BUCKET_STORAGE_CLASS -l $DEFAULT_REGION
-export BUCKET_ID=$PROJECT_ID-$DEFAULT_BUCKET_REPORTS_DEST
+
 gsutil mb gs://$BUCKET_ID
 gsutil iam ch allUsers:objectViewer gs://$BUCKET_ID
 gsutil iam ch allUsers:objectViewer gs://$BUCKET_ID

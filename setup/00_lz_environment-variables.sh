@@ -46,6 +46,7 @@ export REPORTS_APITEST="APITest"
 export REPORTS_RWDTEST="RWDTest"
 export REPORTS_SMOKE="Smoke"
 export REPORTS_UITEST="UITest"
+export BUCKET_ID=$PROJECT_ID-$DEFAULT_BUCKET_REPORTS_DEST
 
 # SonarQube
 export SONAR_NAME="sonarqube-1"

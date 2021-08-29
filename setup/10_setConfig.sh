@@ -24,6 +24,11 @@ gcloud beta runtime-config configs variables set PERFORMANCE_REPO $PERFORMANCE_R
 gcloud beta runtime-config configs variables set SECURITY_REPO $SECURITY_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set ACCESSIBILITY_REPO $ACCESSIBILITY_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 
+echo "Storage Bucket ID = "$BUCKET_ID
+gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
+
+
+
 
 #DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
