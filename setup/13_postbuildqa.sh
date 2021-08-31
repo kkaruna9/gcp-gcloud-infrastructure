@@ -11,7 +11,8 @@ export PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH="temp/gcp-frontend"
 export PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH="temp/landing-zone-pre-buildQA"
 
 gcloud source repos clone $POST_BUILD_FRONTEND_QA $PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
-source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/deploy-services-frontend-to-gke.sh
+#source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/deploy-services-frontend-to-gke.sh
+source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/gcp-postbuild.script.sh
 
 
 export LANDING_ZONE_FUNCTIONAL="landing-zone-functional"
