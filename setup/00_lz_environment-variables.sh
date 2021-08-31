@@ -62,15 +62,26 @@ export KUBECTL_FRONTEND_APP="frontend-app"
 # Repository
 export REPO_PATH="https://source.developers.google.com/p/"$GOOGLE_CLOUD_PROJECT"/r/"
 export LZ_REPOPREFIX=$PROJECT_ID
-export AUT_FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
-export AUT_BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
-export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-frontend"
-export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-backend"
-export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
-export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-functional-assurance"
-export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
-export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
-export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
+#export AUT_FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
+#export AUT_BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
+#export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-frontend"
+#export BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-backend"
+#export DASHBOARD_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-report-dashboard"
+#export FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-functional-assurance"
+#export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
+#export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
+#export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
+
+export AUT_FRONTEND_REPO="gcp-aut-frontend"
+export AUT_BACKEND_REPO="gcp-aut-backend"
+export FRONTEND_REPO="gcp-frontend"
+export BACKEND_REPO="gcp-backend"
+export DASHBOARD_REPO="-gcp-report-dashboard"
+export FUNCTIONAL_REPO="gcp-functional-assurance"
+export PERFORMANCE_REPO="gcp-tests-performance"
+export SECURITY_REPO="gcp-tests-security"
+export ACCESSIBILITY_REPO="gcp-tests-accessibility"
+
 
 
 
