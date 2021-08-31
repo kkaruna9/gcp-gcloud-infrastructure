@@ -19,13 +19,13 @@ cd gcpworkshop-aut-frontend
 git init
 git add .
 git commit -m "init commit"  --quiet
-git remote add origin $FRONTEND_REPO
+git remote add origin $AUT_FRONTEND_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$FRONTEND_REPO' repository"
+  echo "Code push success on '$AUT_FRONTEND_REPO' repository"
 else
-  echo "Failed to push code into '$FRONTEND_REPO' repository"
+  echo "Failed to push code into '$AUT_FRONTEND_REPO' repository"
 fi
 cd ..
 
@@ -53,9 +53,9 @@ git remote add origin $FRONTEND_REPO
 git push -u origin master --quiet
 if [ $? -eq 0 ]
 then
-  echo "Code push success on '$AUT_FRONTEND_REPO' repository"
+  echo "Code push success on '$FRONTEND_REPO' repository"
 else
-  echo "Failed to push code into '$AUT_FRONTEND_REPO' repository"
+  echo "Failed to push code into '$FRONTEND_REPO' repository"
 fi
 cd ..
 
