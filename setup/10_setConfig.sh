@@ -52,7 +52,7 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",
      "projectName": "'$(gcloud config get-value project)'",
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
-     "organizationName": "lz-reportsqea-sandbox"
+     "organizationName": "'$BUCKET_ID'"
 }'
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
 #DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
