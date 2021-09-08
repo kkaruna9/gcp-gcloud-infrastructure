@@ -44,7 +44,7 @@ echo "DEFAULT_MSSQL_IP = "$DEFAULT_MSSQL_IP
 
 
 
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_CICD --zone $DEFAULT_ZONE --project $PROJECT_ID
+#gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_CICD --zone $DEFAULT_ZONE --project $PROJECT_ID
 
 
 
