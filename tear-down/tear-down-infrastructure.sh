@@ -6,7 +6,9 @@ echo "
 "
 
 export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
-export DEFAULT_CLUSTER_QEA="gcp-qea-server"
+export DEFAULT_CLUSTER_QEA_SERVER="gcp-qea-server"
+export DEFAULT_CLUSTER_QEA_APP="gcp-qea-app"
+export DEFAULT_CLUSTER_QEA_CICD="gcp-qea-cicd"
 export KUBECTL_SONARQUBE="sonarqube"
 export KUBECTL_GRID="zalenium"
 export KUBECTL_GRID_RELEASE="release-zalenium"
@@ -44,9 +46,9 @@ echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Configuration >>>>>>>>>>>>>>>>>>>>>>>>
 gcloud beta runtime-config configs delete $DEFAULT_CONFIG_NAME
 if [ $? -eq 0 ]
 then
-  echo "Deleted Global configuration Successfully  '$DEFAULT_CLUSTER_QEA'"
+  echo "Deleted Global configuration Successfully  '$DEFAULT_CLUSTER_QEA_SERVER'"
 else
-  echo "Failed to Delete Global Configuration '$DEFAULT_CLUSTER_QEA"
+  echo "Failed to Delete Global Configuration '$DEFAULT_CLUSTER_QEA_SERVER"
 fi
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Source Repositories >>>>>>>>>>>>>>>>>>>>>>"
@@ -85,12 +87,14 @@ fi
 
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Kubernetes Cluster >>>>>>>>>>>>>>>>>>>>>>>"
-gcloud container clusters delete $DEFAULT_CLUSTER_QEA --region=$DEFAULT_ZONE
+gcloud container clusters delete $DEFAULT_CLUSTER_QEA_SERVER --region=$DEFAULT_ZONE &
+gcloud container clusters delete $DEFAULT_CLUSTER_QEA_APP --region=$DEFAULT_ZONE &
+wait
 if [ $? -eq 0 ]
 then
-  echo "Cluster Deleted Successfully  '$DEFAULT_CLUSTER_QEA'"
+  echo "Clusters Deleted Successfully  '$DEFAULT_CLUSTER_QEA_SERVER'  & '$DEFAULT_CLUSTER_QEA_APP'"
 else
-  echo "Failed to Delete Cluster '$DEFAULT_CLUSTER_QEA"
+  echo "Failed to Delete Clusters '$DEFAULT_CLUSTER_QEA_SERVER'  & '$DEFAULT_CLUSTER_QEA_APP'"
 fi
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Project folders  >>>>>>>>>>>>>>>>>>>>>>>>>"
