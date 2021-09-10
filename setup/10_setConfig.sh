@@ -37,16 +37,13 @@ gcloud beta runtime-config configs variables set DEFAULT_SONAR_IP $DEFAULT_SONAR
 gcloud beta runtime-config configs variables set DEFAULT_GRID_IP $DEFAULT_GRID_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
-
 node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
-
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",
      "projectName": "'$(gcloud config get-value project)'",
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "'$BUCKET_ID'"
 }'
-
 echo "\n\n\n\n"
 echo " GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
