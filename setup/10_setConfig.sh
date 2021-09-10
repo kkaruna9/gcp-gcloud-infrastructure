@@ -7,6 +7,7 @@ echo "
 "
 
 # -------- gcloud config variables for default keys
+
 gcloud beta runtime-config configs create $DEFAULT_CONFIG_NAME --description "Global config that hold major key value pairs"
 gcloud beta runtime-config configs variables set DEFAULT_REGION $DEFAULT_REGION --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_ZONE $DEFAULT_ZONE --config-name $DEFAULT_CONFIG_NAME --is-text
@@ -18,7 +19,7 @@ gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-n
 
 
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE --project $PROJECT_ID
-gcloud beta runtime-config configs variables set DEFAULT_CLUSTER_QEA $DEFAULT_CLUSTER_QEA_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
+gcloud beta runtime-config configs variables set DEFAULT_CLUSTER_QEA_SERVER $DEFAULT_CLUSTER_QEA_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DASHBOARD_REPO $DASHBOARD_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 #DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
