@@ -38,7 +38,7 @@ gcloud beta runtime-config configs variables set DEFAULT_GRID_IP $DEFAULT_GRID_I
 gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 
-node gcp-gcloud-infrastructure/setup/11_mssql-connect.js
+node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
 
 echo " GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
@@ -51,7 +51,6 @@ echo "GCP Workshop Repository Creations     = COMPLETED"
 echo "GCP Workshop Database Creation        = COMPLETED"
 echo "GCP Workshop Global Variables Setup   = COMPLETED"
 echo "GCP Workshop Two Cluster Creation     = COMPLETED"
-echo "GCP Workshop Environment Setup        = COMPLETED"
 echo "GCP Workshop Environment Setup        = COMPLETED"
 echo " -------------------------------------------------------------"
 
