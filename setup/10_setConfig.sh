@@ -40,27 +40,30 @@ gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_D
 
 node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
 
-echo " GCP Workshop - Infrastructure Setup Checklist"
-echo " -------------------------------------------------------------"
-echo "GCP Workshop Storage Bucket Name      = "$BUCKET_ID
-echo "GCP Workshop Quality Gate Server IP   = "$DEFAULT_SONAR_IP
-echo "GCP Workshop MsSQL Database Server IP = "$DEFAULT_MSSQL_IP
-echo "GCP Workshop Reporting Dashboard IP   = "$DEFAULT_DASHBOARD_IP
-echo "GCP Workshop Grid Server IP           = "$DEFAULT_GRID_IP
-echo "GCP Workshop Repository Creations     = COMPLETED"
-echo "GCP Workshop Database Creation        = COMPLETED"
-echo "GCP Workshop Global Variables Setup   = COMPLETED"
-echo "GCP Workshop Two Cluster Creation     = COMPLETED"
-echo "GCP Workshop Environment Setup        = COMPLETED"
-echo " -------------------------------------------------------------"
-
-
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",
      "projectName": "'$(gcloud config get-value project)'",
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "'$BUCKET_ID'"
 }'
+
+echo "\n\n\n\n"
+echo " GCP Workshop - Infrastructure Setup Checklist"
+echo " -------------------------------------------------------------"
+echo "GCP Workshop Two Cluster Creation      = COMPLETED"
+echo "GCP Workshop Repository Creations      = COMPLETED"
+echo "GCP Workshop Storage Bucket Name       = "$BUCKET_ID
+echo "GCP Workshop Quality Gate Server IP    = "$DEFAULT_SONAR_IP
+echo "GCP Workshop Reporting Dashboard IP    = "$DEFAULT_DASHBOARD_IP
+echo "GCP Workshop Grid Server IP            = "$DEFAULT_GRID_IP
+echo "GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
+echo "GCP Workshop Database Creation         = COMPLETED"
+echo "GCP Workshop Global Variables Setup    = COMPLETED"
+echo "GCP Workshop Environment Setup         = COMPLETED"
+echo "GCP Workshop Infra Update to Dashboard = COMPLETED"
+echo " -------------------------------------------------------------"
+echo "\n\n\n"
+
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
 #DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 #echo "DEFAULT_APPLICATION_HOST = "$DEFAULT_APPLICATION_HOST
