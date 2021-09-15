@@ -148,6 +148,20 @@ else
   echo "Failed to push code into '$ACCESSIBILITY_REPO' repository"
 fi
 
+#nft - landing-zone-pre-buildQA repo
+cd gcpworkshop-landing-zone-pre-buildQA
+git init
+git add .
+git commit -m "init commit" --quiet
+git remote add origin $LANDINGZONE_PREBUILDQA_REPO
+git push -u origin master --quiet
+if [ $? -eq 0 ]
+then
+  echo "Code push success on '$LANDINGZONE_PREBUILDQA_REPO' repository"
+else
+  echo "Failed to push code into '$LANDINGZONE_PREBUILDQA_REPO' repository"
+fi
+
 cd
 
 

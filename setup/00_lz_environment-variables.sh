@@ -87,6 +87,7 @@ export FUNCTIONAL_REPO="gcp-functional-assurance"
 export PERFORMANCE_REPO="gcp-tests-performance"
 export SECURITY_REPO="gcp-tests-security"
 export ACCESSIBILITY_REPO="gcp-tests-accessibility"
+export LANDINGZONE_PREBUILDQA_REPO="landing-zone-pre-buildQA"
 
 
 

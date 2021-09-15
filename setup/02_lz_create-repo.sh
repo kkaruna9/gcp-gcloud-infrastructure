@@ -84,3 +84,11 @@ then
 else
   echo "Failed to create '$LZ_REPOPREFIX-gcp-tests-accessibility' repository"
 fi
+
+gcloud -q source repos create $LZ_REPOPREFIX-landing-zone-pre-buildQA
+if [ $? -eq 0 ]
+then
+  echo "Created '$LZ_REPOPREFIX-landing-zone-pre-buildQA' repository"
+else
+  echo "Failed to create '$LZ_REPOPREFIX-landing-zone-pre-buildQA' repository"
+fi
