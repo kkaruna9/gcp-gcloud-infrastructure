@@ -10,7 +10,7 @@ source temp/gcp-gcloud-infrastructure/setup/00_lz_environment-variables.sh
 source temp/gcp-gcloud-infrastructure/setup/01_lz_create_kubectl_clusters.sh
 source temp/gcp-gcloud-infrastructure/setup/02_lz_create-repo.sh
 source temp/gcp-gcloud-infrastructure/setup/03_lz_create-bucket.sh
-#source temp/gcp-gcloud-infrastructure/setup/04_push_source2workshop.sh
+source temp/gcp-gcloud-infrastructure/setup/04_push_source2workshop.sh
 source temp/gcp-gcloud-infrastructure/setup/05_lz_spin_grid_server.sh
 source temp/gcp-gcloud-infrastructure/setup/06_lz_create_container_registry.sh
 source temp/gcp-gcloud-infrastructure/setup/07_lz_create-report-dashboard.sh
