@@ -147,6 +147,7 @@ then
 else
   echo "Failed to push code into '$ACCESSIBILITY_REPO' repository"
 fi
+cd ..
 
 #nft - landing-zone-pre-buildQA repo
 cd gcpworkshop-landing-zone-pre-buildQA
