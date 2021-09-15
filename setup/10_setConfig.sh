@@ -11,6 +11,9 @@ echo "
 gcloud beta runtime-config configs create $DEFAULT_CONFIG_NAME --description "Global config that hold major key value pairs"
 gcloud beta runtime-config configs variables set DEFAULT_REGION $DEFAULT_REGION --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_ZONE $DEFAULT_ZONE --config-name $DEFAULT_CONFIG_NAME --is-text
+gcloud beta runtime-config configs variables set DEFAULT_ZONE_APP $DEFAULT_ZONE_APP --config-name $DEFAULT_CONFIG_NAME --is-text
+gcloud beta runtime-config configs variables set DEFAULT_ZONE_SERVER $DEFAULT_ZONE_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
+
 gcloud beta runtime-config configs variables set PROJECT_ID $PROJECT_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
