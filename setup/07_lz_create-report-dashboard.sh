@@ -12,7 +12,7 @@ echo "
 #docker images
 #kubectl get service
 #kubectl expose deployment reportingdashboard --name=reportingdashboard-service --type=LoadBalancer --port 3337 --target-port 3337
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE --project $PROJECT_ID
+gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
 #kubectl create namespace $KUBECTL_RDASHBAORD
 #kubectl get namespace
 #kubectl run $KUBECTL_RDASHBAORD --image=karthiknarayanpdec11/reporting-dashboard:latest --namespace=$KUBECTL_RDASHBAORD

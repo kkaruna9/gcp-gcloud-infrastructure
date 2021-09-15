@@ -13,7 +13,7 @@ gcloud beta runtime-config configs variables set DEFAULT_REGION $DEFAULT_REGION 
 gcloud beta runtime-config configs variables set DEFAULT_ZONE $DEFAULT_ZONE --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set PROJECT_ID $PROJECT_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE --project $PROJECT_ID
+gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
 gcloud beta runtime-config configs variables set DEFAULT_CLUSTER_QEA_SERVER $DEFAULT_CLUSTER_QEA_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DASHBOARD_REPO $DASHBOARD_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 #DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
@@ -22,7 +22,7 @@ DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --template="{{range .sta
 #DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 #DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
+gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_APP --zone $DEFAULT_ZONE_APP --project $PROJECT_ID
 gcloud beta runtime-config configs variables set FRONTEND_REPO $FRONTEND_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BACKEND_REPO $BACKEND_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set FUNCTIONAL_REPO $FUNCTIONAL_REPO --config-name $DEFAULT_CONFIG_NAME --is-text

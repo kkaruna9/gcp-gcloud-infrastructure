@@ -7,7 +7,7 @@ echo "
 "
 
 # gcloud container clusters get-credentials spinnaker-ci-cd --zone us-east1-c --project $PROJECT_ID
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE --project $PROJECT_ID
+gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
 #kubectl create namespace $KUBECTL_SONARQUBE
 #kubectl get namespace
 # kubectl describe po -n $KUBECTL_SONARQUBE $KUBECTL_SONARQUBE
