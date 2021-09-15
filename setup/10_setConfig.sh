@@ -23,6 +23,7 @@ DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --template="{{range .sta
 #DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_APP --zone $DEFAULT_ZONE_APP --project $PROJECT_ID
+gcloud beta runtime-config configs variables set DEFAULT_CLUSTER_QEA_APP $DEFAULT_CLUSTER_QEA_APP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set FRONTEND_REPO $FRONTEND_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BACKEND_REPO $BACKEND_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set FUNCTIONAL_REPO $FUNCTIONAL_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
