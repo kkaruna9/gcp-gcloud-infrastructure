@@ -45,6 +45,5 @@ source temp/gcp-gcloud-infrastructure/tear-down/04_tear-down-storage.sh
 source temp/gcp-gcloud-infrastructure/tear-down/05_tear-down-clusters.sh
 source temp/gcp-gcloud-infrastructure/tear-down/06_tear-down-services.sh
 source temp/gcp-gcloud-infrastructure/tear-down/07_tear-down-configs.sh
-rm -rf temp/
 
 
