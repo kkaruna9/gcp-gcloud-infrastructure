@@ -4,6 +4,7 @@ echo "
 |                         Creating cloud source repositories                 |
 +----------------------------------------------------------------------------+
 "
+gcloud services enable sourcerepo.googleapis.com
 
 gcloud -q source repos create $LZ_REPOPREFIX-landling-zone
 if [ $? -eq 0 ]

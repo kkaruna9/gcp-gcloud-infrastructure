@@ -94,9 +94,14 @@ export LANDINGZONE_PREBUILDQA_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-pre-bu
 
 
 
-# Default Git
-git config --global user.email a.dinesh1901@gmail.com
-git config --global user.name dinesh-akrishnan
+# Default Git git config --global -e user.email a.dinesh1901@gmail.com git config --global user.name dinesh-akrishnan
+export GIT_USERNAME
+export GIT_USEREMAIL
+read -p 'Git Global User Name :' GIT_USERNAME
+read -p 'Git Global User Email :' GIT_USEREMAIL
+
+git config --global -e user.email $GIT_USEREMAIL
+git config --global user.name $GIT_USERNAME
 
 npm install mssql
 npm install shelljs
