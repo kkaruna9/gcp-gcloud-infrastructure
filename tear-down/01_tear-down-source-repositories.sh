@@ -54,12 +54,12 @@ else
   echo "Failed to delete '$LZ_REPOPREFIX-gcp-report-dashboard' repository"
 fi
 
-gcloud -q source repos delete $LZ_REPOPREFIX-gcp-functional-assurance
+gcloud -q source repos delete $LZ_REPOPREFIX-gcp-tests-functional
 if [ $? -eq 0 ]
 then
-  echo "Deleted '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
+  echo "Deleted '$LZ_REPOPREFIX-gcp-tests-functional' repository"
 else
-  echo "Failed to delete '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
+  echo "Failed to delete '$LZ_REPOPREFIX-gcp-tests-functional' repository"
 fi
 
 gcloud -q source repos delete $LZ_REPOPREFIX-gcp-tests-performance
