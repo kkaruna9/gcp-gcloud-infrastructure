@@ -7,12 +7,3 @@ then
 else
   echo "Failed to Delete Clusters '$DEFAULT_CLUSTER_QEA_SERVER'  & '$DEFAULT_CLUSTER_QEA_APP'"
 fi
-
-echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Project folders  >>>>>>>>>>>>>>>>>>>>>>>>>"
-rm -rf temp
-if [ $? -eq 0 ]
-then
-  echo "Deleted temp folder"
-else
-  echo "Failed to Delete temp folder"
-fi

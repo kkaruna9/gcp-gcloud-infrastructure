@@ -1,4 +1,5 @@
 
+echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Disabling all the services used for the workshop >>>>>>>>>>>>>>>>>>>>>>>"
 
 gcloud services disable sourcerepo.googleapis.com
 gcloud services disable cloudresourcemanager.googleapis.com
