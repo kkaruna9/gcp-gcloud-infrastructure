@@ -54,12 +54,12 @@ else
   echo "Failed to create '$LZ_REPOPREFIX-gcp-report-dashboard' repository"
 fi
 
-gcloud -q source repos create $LZ_REPOPREFIX-gcp-functional-assurance
+gcloud -q source repos create $LZ_REPOPREFIX-gcp-tests-functional
 if [ $? -eq 0 ]
 then
-  echo "Created '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
+  echo "Created '$LZ_REPOPREFIX-gcp-tests-functional' repository"
 else
-  echo "Failed to create '$LZ_REPOPREFIX-gcp-functional-assurance' repository"
+  echo "Failed to create '$LZ_REPOPREFIX-gcp-tests-functional' repository"
 fi
 
 gcloud -q source repos create $LZ_REPOPREFIX-gcp-tests-performance
