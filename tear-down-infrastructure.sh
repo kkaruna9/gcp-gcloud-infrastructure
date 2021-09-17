@@ -43,7 +43,8 @@ source temp/gcp-gcloud-infrastructure/tear-down/02_tear-down-triggers.sh
 source temp/gcp-gcloud-infrastructure/tear-down/03_tear-down-config.sh
 source temp/gcp-gcloud-infrastructure/tear-down/04_tear-down-storage.sh
 source temp/gcp-gcloud-infrastructure/tear-down/05_tear-down-clusters.sh
-source temp/gcp-gcloud-infrastructure/tear-down/06_tear-down-gcpservices.sh
+source temp/gcp-gcloud-infrastructure/tear-down/06_tear-down-project.sh
 source temp/gcp-gcloud-infrastructure/tear-down/07_tear-down-configs.sh
+source temp/gcp-gcloud-infrastructure/tear-down/08_tear-down-gcpservices.sh
 
 
