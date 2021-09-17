@@ -20,7 +20,7 @@ export PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH=temp/$LZ_REPOPREFIX-landing-zone
 
 
 #gcloud source repos clone $PRE_BUILD_BACKEND_QA $PRE_BUILD_BACKEND_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
-#gcloud source repos clone $PRE_BUILD_LANDINGZONE_QA $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
+gcloud source repos clone $PRE_BUILD_LANDINGZONE_QA $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH --project=$PROJECT_ID
 #source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/create_triggers_in_cloud_build.sh
 source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/gcp-prebuild-script.sh
 #source $PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH/run-bvt-with-mock-services.sh
