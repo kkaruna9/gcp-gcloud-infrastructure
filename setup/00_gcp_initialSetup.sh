@@ -22,7 +22,8 @@ if [ "$san" != "${san#[Yy]}" ] ;then
     PROJECT_ID=$(gcloud config get-value project)
     gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
     gcloud iam service-accounts keys create $PROJECT_ID.json --iam-account=$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com
-    export GOOGLE_APPLICATION_CREDENTIALS="temp/service-account-file.json"
+    mv $PROJECT_ID.json temp
+    export GOOGLE_APPLICATION_CREDENTIALS="temp/"$PROJECT_ID.json
 else
     echo Service Account setup is done by user Manually
 fi
