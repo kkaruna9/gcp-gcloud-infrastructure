@@ -8,7 +8,8 @@ echo -n "Do you want to create a new project (y/n)? "
 read answer
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     read -p 'Project Name :' PROJECT_NAME
-    gcloud projects create $PROJECT_NAME
+    gcloud projects create $PROJECT_NAME --set-as-default
+    gcloud config set project $PROJECT_NAME
 else
     echo No
 fi
