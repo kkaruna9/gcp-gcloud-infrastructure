@@ -4,7 +4,6 @@ echo "
 |                         Creating cloud VM Instance                         |
 +----------------------------------------------------------------------------+
 "
-
 echo -n "Please setup existing service account and continue (y/n)? "
 read san
 if [ "$san" != "${san#[Yy]}" ] ;then
@@ -24,8 +23,8 @@ sudo apt update
 sudo apt-cache policy docker-ce
 sudo apt install docker-ce
 sudo systemctl status docker
-docker info
-docker run -d --name sonarqube -p 6002:9000 sonarqube:7.5-community
+sudo docker info
+sudo docker run -d --name sonarqube -p 6002:9000 sonarqube:7.5-community
 sudo docker run --name reportingdashboard -p 3337:3337 --rm -i -t -d karthiknarayanpdec11/dashboardgcp:latest
 sudo docker pull elgalu/selenium
 sudo docker pull dosel/zalenium
