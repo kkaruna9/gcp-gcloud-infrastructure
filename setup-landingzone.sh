@@ -4,8 +4,6 @@ echo "
 |                   GCP - OneShot - Infrastructure Setup                     |
 +----------------------------------------------------------------------------+
 "
-rm -rf temp/
-mkdir temp && cd temp && git clone https://github.com/dinesh-akrishnan/gcp-gcloud-infrastructure.git && cd ..
 source temp/gcp-gcloud-infrastructure/setup/00_gcp_initialSetup.sh
 source temp/gcp-gcloud-infrastructure/setup/00_lz_environment-variables.sh
 source temp/gcp-gcloud-infrastructure/setup/01_vm_setup.sh
