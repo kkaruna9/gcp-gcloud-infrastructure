@@ -11,7 +11,8 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     gcloud projects create $PROJECT_NAME --set-as-default
     gcloud config set project $PROJECT_NAME
 else
-    echo No
+    red=`tput setaf 1`
+    echo  $red ALERT ! If default project exist and it will be choosen, else please re-start to create a new project
 fi
 
 echo -n "Create a service account with owner role (y/n)? "
@@ -26,7 +27,8 @@ if [ "$san" != "${san#[Yy]}" ] ;then
     export SA_NAME=$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com
     export GOOGLE_APPLICATION_CREDENTIALS="temp/"$PROJECT_ID.json
 else
-    echo Service Account setup is done by user Manually
+    red=`tput setaf 1`
+    echo  $red ALERT !  Service Account setup is done by user Manually
 fi
 
 
