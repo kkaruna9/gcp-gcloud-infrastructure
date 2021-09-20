@@ -4,6 +4,16 @@ echo "
 |                         Creating cloud VM Instance                         |
 +----------------------------------------------------------------------------+
 "
+
+echo -n "Please setup existing service account and continue (y/n)? "
+read san
+if [ "$san" != "${san#[Yy]}" ] ;then
+    read -p 'Enter Service Account Name :' serviceAccountName
+    SA_NAME=$serviceAccountName
+else
+    echo Service Account setup is not done. Hence default service account SA_NAME is choosen
+fi
+
 gcloud beta compute --project=$PROJECT_ID instances create $DEFAULT_CLUSTER_QEA_SERVER --zone=$DEFAULT_ZONE_SERVER --machine-type=e2-standard-8 --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=$SA_NAME --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server,https-server --image=debian-10-buster-v20210916 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=$DEFAULT_VM_NAME --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=an
 gcloud beta compute ssh --zone $DEFAULT_ZONE_SERVER $DEFAULT_VM_NAME  --project $PROJECT_ID
 sudo apt update
