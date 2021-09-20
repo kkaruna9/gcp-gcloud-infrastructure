@@ -4,6 +4,8 @@ echo "
 |                         Creating cloud VM Instance                         |
 +----------------------------------------------------------------------------+
 "
+gcloud iam service-accounts list
+
 echo -n "Please setup existing service account and continue (y/n)? "
 read san
 if [ "$san" != "${san#[Yy]}" ] ;then
@@ -28,14 +30,10 @@ sudo docker run -d --name sonarqube -p 6002:9000 sonarqube:7.5-community
 sudo docker run --name reportingdashboard -p 3337:3337 --rm -i -t -d karthiknarayanpdec11/dashboardgcp:latest
 sudo docker pull elgalu/selenium
 sudo docker pull dosel/zalenium
-sudo docker run --rm -ti --name zalenium -p 4444:4444 \
-      -v /var/run/docker.sock:/var/run/docker.sock \
-      -v /tmp/videos:/home/seluser/videos \
-      --privileged dosel/zalenium start
-
-gcloud compute firewall-rules create sonar-firewall-rule --allow tcp:6002 --source-tags=troublesheet-instance --source-ranges=0.0.0.0/0 --description="For testing purpose"
-gcloud compute firewall-rules create report-firewall-rule --allow tcp:3337 --source-tags=troublesheet-instance --source-ranges=0.0.0.0/0 --description="For testing purpose"
-gcloud compute firewall-rules create zalenium-firewall-rule --allow tcp:4444 --source-tags=troublesheet-instance --source-ranges=0.0.0.0/0 --description="For testing purpose"
+sudo docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
+gcloud compute firewall-rules create sonar-firewall-rule --allow tcp:6002 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
+gcloud compute firewall-rules create report-firewall-rule --allow tcp:3337 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
+gcloud compute firewall-rules create zalenium-firewall-rule --allow tcp:4444 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
 
 
 
