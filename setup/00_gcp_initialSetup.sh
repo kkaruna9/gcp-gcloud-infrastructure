@@ -36,8 +36,8 @@ fi
 
 '
 
-PROJECT_NAME="gcp-digital-shopify"
-SA_NAME="sa-digital-shopify"
+PROJECT_NAME="gcp-digital-shopify"$(shuf -i 1-100000 -n 1)
+SA_NAME="sa-shopify"
 gcloud projects create $PROJECT_NAME --set-as-default
 gcloud config set project $PROJECT_NAME
 userEmail=$(gcloud auth list --format="value(account)")
