@@ -6,12 +6,12 @@ echo "
 "
 gcloud services enable sourcerepo.googleapis.com
 
-gcloud -q source repos create $LZ_REPOPREFIX-landling-zone
+gcloud -q source repos create $LZ_REPOPREFIX-landing-zone
 if [ $? -eq 0 ]
 then
-  echo "Created '$LZ_REPOPREFIX-landling-zone' repository"
+  echo "Created '$LZ_REPOPREFIX-landing-zone' repository"
 else
-  echo "Failed to create '$LZ_REPOPREFIX-landling-zone' repository"
+  echo "Failed to create '$LZ_REPOPREFIX-landing-zone' repository"
 fi
 
 gcloud -q source repos create $LZ_REPOPREFIX-gcp-aut-frontend
@@ -92,4 +92,12 @@ then
   echo "Created '$LZ_REPOPREFIX-landing-zone-pre-buildQA' repository"
 else
   echo "Failed to create '$LZ_REPOPREFIX-landing-zone-pre-buildQA' repository"
+fi
+
+gcloud -q source repos create $LZ_REPOPREFIX-landing-zone-functional
+if [ $? -eq 0 ]
+then
+  echo "Created '$LZ_REPOPREFIX-landing-zone-functional' repository"
+else
+  echo "Failed to create '$LZ_REPOPREFIX-landing-zone-functional' repository"
 fi

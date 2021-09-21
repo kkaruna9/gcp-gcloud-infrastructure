@@ -80,6 +80,8 @@ export PERFORMANCE_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-performance"
 export SECURITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-security"
 export ACCESSIBILITY_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-tests-accessibility"
 export LANDINGZONE_PREBUILDQA_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-pre-buildQA"
+export LANDINGZONE_FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-functional"
+
 
 
 #export AUT_FRONTEND_REPO="gcp-aut-frontend"
