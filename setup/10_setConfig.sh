@@ -44,12 +44,16 @@ gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
 
-value=`cat "temp/"$PROJECT_ID.json`
-echo $value
+# value=`cat "temp/"$PROJECT_ID.json`
+# echo $value
+# curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updateSA' \
+# --header 'Content-Type: application/json' \
+# --data '"'$value'"'
 
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updateSA' \
 --header 'Content-Type: application/json' \
---data-raw '"'$value'"'
+--data "@temp/$PROJECT_ID.json"
+
 
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",

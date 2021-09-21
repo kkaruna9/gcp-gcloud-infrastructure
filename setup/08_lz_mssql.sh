@@ -12,5 +12,12 @@ kubectl create namespace $KUBECTL_MSSQL
 kubectl get namespace
 kubectl apply -f  "temp/gcp-gcloud-infrastructure/setup/mssql.yml"
 
+bash -c external_mysqlip="";
+while [ -z $external_mysqlip ];
+do echo "Please Wait - SonarQube is Loading...";
+external_mysqlip=$(kubectl get svc $KUBECTL_MSSQL --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+[ -z "$external_mysqlip" ] && sleep 15; done; echo "End point ready-" && echo $external_mysqlip; export endpoint=external_mysqlip
+
+
 
 #kubectl get pod mssql-container --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
