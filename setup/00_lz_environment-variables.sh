@@ -26,9 +26,10 @@ export DEFAULT_CLUSTER_QEA_SERVER="gcp-qea-server"
 export DEFAULT_VM_NAME="gcp-qea-server"
 export DEFAULT_CLUSTER_QEA_APP="gcp-qea-app"
 export DEFAULT_CLUSTER_QEA_CICD="gcp-qea-cicd"
-export DEFAULT_CLUSTER_VERSION="1.19.12-gke.2101"
+export DEFAULT_CLUSTER_VERSION="1.19.13-gke.701"
 export DEFAULT_CLUSTER_APP="gcp-app-server"
 export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
+export DEFAULT_VM_EXTERNAL_IP=""
 
 
 # Host IPs

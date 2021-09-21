@@ -16,15 +16,16 @@ gcloud beta runtime-config configs variables set DEFAULT_ZONE_SERVER $DEFAULT_ZO
 
 gcloud beta runtime-config configs variables set PROJECT_ID $PROJECT_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
-gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
+#gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
 gcloud beta runtime-config configs variables set DEFAULT_CLUSTER_QEA_SERVER $DEFAULT_CLUSTER_QEA_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DASHBOARD_REPO $DASHBOARD_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
 #DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --namespace=$KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
-DEFAULT_SONAR_IP=$(kubectl get svc $KUBECTL_SONARQUBE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
-DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_VM_EXTERNAL_IP=$(gcloud compute instances list --filter="name ~ .*gcp-qea-server.*"  --format="value(networkInterfaces[].accessConfigs[0].natIP.notnull().list()      :label=EXTERNAL_IP)");
+DEFAULT_SONAR_IP=$DEFAULT_VM_EXTERNAL_IP
+DEFAULT_GRID_IP=$DEFAULT_VM_EXTERNAL_IP
 #DEFAULT_GRID_IP=$(kubectl get svc $KUBECTL_GRID_RELEASE --namespace=$KUBECTL_GRID --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 #DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --namespace=$KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
-DEFAULT_DASHBOARD_IP=$(kubectl get svc $KUBECTL_RDASHBAORD --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
+DEFAULT_DASHBOARD_IP=$DEFAULT_VM_EXTERNAL_IP
 gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_APP --zone $DEFAULT_ZONE_APP --project $PROJECT_ID
 gcloud beta runtime-config configs variables set DEFAULT_CLUSTER_QEA_APP $DEFAULT_CLUSTER_QEA_APP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set FRONTEND_REPO $FRONTEND_REPO --config-name $DEFAULT_CONFIG_NAME --is-text
@@ -42,6 +43,14 @@ gcloud beta runtime-config configs variables set DEFAULT_GRID_IP $DEFAULT_GRID_I
 gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
+
+value=`cat "temp/"$PROJECT_ID.json`
+echo $value
+
+curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updateSA' \
+--header 'Content-Type: application/json' \
+--data-raw '"'$value'"'
+
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",
      "projectName": "'$(gcloud config get-value project)'",
@@ -55,7 +64,10 @@ echo
 echo
 echo " GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
-echo "GCP Workshop Two Cluster Creation      = COMPLETED"
+echo "GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
+echo "GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
+echo "GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
+echo "GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
 echo "GCP Workshop Repository Creations      = COMPLETED"
 echo "GCP Workshop Storage Bucket Name       = "$BUCKET_ID
 echo "GCP Workshop Quality Gate Server IP    = "$DEFAULT_SONAR_IP
@@ -66,6 +78,10 @@ echo "GCP Workshop Database Creation         = COMPLETED"
 echo "GCP Workshop Global Variables Setup    = COMPLETED"
 echo "GCP Workshop Environment Setup         = COMPLETED"
 echo "GCP Workshop Infra Update to Dashboard = COMPLETED"
+echo "GCP Workshop Secrets Updating          = COMPLETED"
+echo "GCP Workshop Landing Zone Update       = COMPLETED"
+
+
 echo " -------------------------------------------------------------"
 echo
 echo
