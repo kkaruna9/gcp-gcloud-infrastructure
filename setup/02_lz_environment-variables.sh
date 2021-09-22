@@ -68,8 +68,8 @@ export KUBECTL_FRONTEND_APP="frontend-app"
 
 
 # Repository
-export REPO_PATH="https://source.developers.google.com/p/"$GOOGLE_CLOUD_PROJECT"/r/"
 export LZ_REPOPREFIX=$PROJECT_ID
+export REPO_PATH="https://source.developers.google.com/p/"$PROJECT_ID"/r/"
 export AUT_FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-frontend"
 export AUT_BACKEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-aut-backend"
 export FRONTEND_REPO=$REPO_PATH$LZ_REPOPREFIX"-gcp-frontend"
