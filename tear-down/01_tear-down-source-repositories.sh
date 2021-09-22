@@ -93,3 +93,11 @@ then
 else
   echo "Failed to delete '$LZ_REPOPREFIX-landing-zone-pre-buildQA' repository"
 fi
+
+gcloud -q source repos delete $LZ_REPOPREFIX-landing-zone-functional
+if [ $? -eq 0 ]
+then
+  echo "Deleted '$LZ_REPOPREFIX-landing-zone-functionalA' repository"
+else
+  echo "Failed to delete '$LZ_REPOPREFIX-landing-zone-functional' repository"
+fi
