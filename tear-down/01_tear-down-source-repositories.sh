@@ -13,23 +13,6 @@ else
   echo "Failed to delete '$LZ_REPOPREFIX-landling-zone' repository"
 fi
 
-
-gcloud -q source repos delete $LZ_REPOPREFIX-gcp-aut-frontend
-if [ $? -eq 0 ]
-then
-  echo "Deleted '$LZ_REPOPREFIX-gcp-aut-frontend' repository"
-else
-  echo "Failed to delete '$LZ_REPOPREFIX-gcp-aut-frontend' repository"
-fi
-
-gcloud -q source repos delete $LZ_REPOPREFIX-gcp-aut-backend
-if [ $? -eq 0 ]
-then
-  echo "Deleted '$LZ_REPOPREFIX-gcp-aut-backend' repository"
-else
-  echo "Failed to delete '$LZ_REPOPREFIX-gcp-aut-backend' repository"
-fi
-
 gcloud -q source repos delete $LZ_REPOPREFIX-gcp-backend
 if [ $? -eq 0 ]
 then
