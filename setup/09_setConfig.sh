@@ -13,6 +13,8 @@ gcloud beta runtime-config configs variables set DEFAULT_REGION $DEFAULT_REGION 
 gcloud beta runtime-config configs variables set DEFAULT_ZONE $DEFAULT_ZONE --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_ZONE_APP $DEFAULT_ZONE_APP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_ZONE_SERVER $DEFAULT_ZONE_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
+gcloud beta runtime-config configs variables set PROJECT_NAME $PROJECT_NAME --config-name $DEFAULT_CONFIG_NAME --is-text
+gcloud beta runtime-config configs variables set PROJECT_NUMBER $PROJECT_NUMBER --config-name $DEFAULT_CONFIG_NAME --is-text
 
 gcloud beta runtime-config configs variables set PROJECT_ID $PROJECT_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
@@ -42,7 +44,7 @@ gcloud beta runtime-config configs variables set DEFAULT_SONAR_IP $DEFAULT_SONAR
 gcloud beta runtime-config configs variables set DEFAULT_GRID_IP $DEFAULT_GRID_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_MSSQL_IP $DEFAULT_MSSQL_IP --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set DEFAULT_DASHBOARD_IP $DEFAULT_DASHBOARD_IP --config-name $DEFAULT_CONFIG_NAME --is-text
-node temp/gcp-gcloud-infrastructure/setup/11_mssql-connect.js
+node temp/gcp-gcloud-infrastructure/setup/mssql-connect.js
 
 # value=`cat "temp/"$PROJECT_ID.json`
 # echo $value

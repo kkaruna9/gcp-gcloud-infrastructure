@@ -7,12 +7,12 @@ echo "
 # git clone https://github.com/dinesh-akrishnan/gcp-gcloud-infrastructure.git
 # cd gcp-gcloud-infrastructure
 # cd landing-zone-setup
-# sh ./00_lz_environment-variables.sh
-# sh ./02_lz_create-repo.sh
+# sh ./02_lz_environment-variables.sh
+# sh ./03_lz_create-repo.sh
 
 #  Latest QEA-SANDBOX Execution
 #  git clone https://github.com/dinesh-akrishnan/gcp-gcloud-infrastructure.git
-#  source sh ./00_lz_environment-variables.sh
+#  source sh ./02_lz_environment-variables.sh
 
 # Common  Variables
 
@@ -102,7 +102,7 @@ export LANDINGZONE_FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-functi
 export GIT_USERNAME
 export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
 read -p 'Git Global User Name :' GIT_USERNAME
-read -p 'Git Global User Email :' GIT_USEREMAIL
+#read -p 'Git Global User Email :' GIT_USEREMAIL
 
 git config --global -e user.email $GIT_USEREMAIL
 git config --global user.name $GIT_USERNAME
