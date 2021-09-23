@@ -4,7 +4,7 @@ echo "
 |                       Setup & execute Post-Build QA                         |
 +----------------------------------------------------------------------------+
 "
-
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 #export POST_BUILD_FRONTEND_QA=$LZ_REPOPREFIX-gcp-frontend
 #export PRE_BUILD_FRONTEND_QA_DEST_LOCAL_PATH=temp/$LZ_REPOPREFIX-gcp-frontend
 export PRE_BUILD_LANDINGZONE_QA_DEST_LOCAL_PATH=temp/$LZ_REPOPREFIX-landing-zone-pre-buildQA

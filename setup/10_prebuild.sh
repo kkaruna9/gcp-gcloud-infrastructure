@@ -10,7 +10,7 @@ echo "
 #sh landing-zone-pre-buildQA/create_triggers_in_cloud_build.sh
 #sh landing-zone-pre-buildQA/run-bvt-with-mock-services.sh
 
-
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 #export PRE_BUILD_BACKEND_QA=$LZ_REPOPREFIX-gcp-backend
 export PRE_BUILD_LANDINGZONE_QA=$LZ_REPOPREFIX-landing-zone-pre-buildQA
 

@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Disabling all the services used for the workshop >>>>>>>>>>>>>>>>>>>>>>>"
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 
 gcloud services disable sourcerepo.googleapis.com
 gcloud services disable cloudresourcemanager.googleapis.com

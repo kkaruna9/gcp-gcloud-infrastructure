@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP build tears >>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 
 #gcloud beta builds triggers delete gcp-frontend-trigger -q
 #gcloud beta builds triggers delete gcp-backend-trigger -q

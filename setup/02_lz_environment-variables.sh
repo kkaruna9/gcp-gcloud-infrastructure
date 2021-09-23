@@ -99,7 +99,10 @@ export LANDINGZONE_FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-functi
 
 
 # Default Git git config --global -e user.email a.dinesh1901@gmail.com git config --global user.name dinesh-akrishnan
-
-
+export GIT_USERNAME=$GIT_USERNAME
+export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
+export SERVICE_ACCOUNT=$SERVICE_ACCOUNT
+export SA_NAME=$SA_NAME
+export PROJECT_NUMBER=$PROJECT_NUMBER
 
 
