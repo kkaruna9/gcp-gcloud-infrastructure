@@ -1,4 +1,4 @@
-
+#!/bin/sh
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Bucket Storages >>>>>>>>>>>>>>>>>>>>>>>>>>"
 gsutil rm -r gs://$DEFAULT_BUCKET_REPORTS_DEST
 if [ $? -eq 0 ]

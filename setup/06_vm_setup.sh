@@ -21,11 +21,11 @@ fi: '
 gcloud beta compute --project=$PROJECT_ID instances create $DEFAULT_CLUSTER_QEA_SERVER --zone=$DEFAULT_ZONE_SERVER --machine-type=e2-standard-8 --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=$SA_NAME --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server,https-server --image=debian-10-buster-v20210916 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=$DEFAULT_CLUSTER_QEA_SERVER --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
 sleep 60
 gcloud compute instances list
-gcloud compute ssh --zone $DEFAULT_ZONE_SERVER $DEFAULT_CLUSTER_QEA_SERVER --project $PROJECT_ID --command 'sudo apt update &&
+gcloud compute ssh --zone $DEFAULT_ZONE_SERVER $DEFAULT_CLUSTER_QEA_SERVER --project $PROJECT_ID --command 'sudo apt update -y &&
 sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common &&
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - &&
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" &&
-sudo apt update &&
+sudo apt update -y &&
 sudo apt-cache policy docker-ce &&
 sudo apt install docker-ce &&
 sudo systemctl status docker &&

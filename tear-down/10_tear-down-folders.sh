@@ -1,4 +1,4 @@
-
+#!/bin/sh
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Project folders  >>>>>>>>>>>>>>>>>>>>>>>>>"
 rm -rf temp/
 rm -rf *

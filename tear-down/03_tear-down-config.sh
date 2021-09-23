@@ -1,4 +1,4 @@
-
+#!/bin/sh
 
 echo "<<<<<<<<<<<<<<<<<<<< Tear Down: GCP Configuration >>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 gcloud beta runtime-config configs delete $DEFAULT_CONFIG_NAME

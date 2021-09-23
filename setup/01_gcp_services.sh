@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "
 +----------------------------------------------------------------------------+
 |     Enabling the Google Cloud Services for the workshop                    |
