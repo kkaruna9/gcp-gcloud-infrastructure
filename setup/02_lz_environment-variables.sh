@@ -102,7 +102,8 @@ export LANDINGZONE_FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-functi
 export GIT_USERNAME=$GIT_USERNAME
 export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
 export SERVICE_ACCOUNT=$SERVICE_ACCOUNT
-export SA_NAME=$SA_NAME
-export PROJECT_NUMBER=$PROJECT_NUMBER
+export SA_NAME="sa-shopify"
+export SERVICE_ACCOUNT=$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com"
+export PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')
 
 

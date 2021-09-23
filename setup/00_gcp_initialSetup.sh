@@ -45,7 +45,7 @@ gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify Serv
 PROJECT_ID=$(gcloud config get-value project)
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder"
-PROJECT_NUMBER="$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')"
+PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/container.developer"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/kubernetes.engine.admin"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/storage.admin"
