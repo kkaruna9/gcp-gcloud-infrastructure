@@ -63,6 +63,12 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "'$BUCKET_ID'"
 }'
+
+curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatebuildid' --header 'Content-Type: application/json' --data-raw '{
+     "module":"PROJECTID",
+     "value":"'$(gcloud config get-value project)'",
+}'
+
 echo
 echo
 echo
