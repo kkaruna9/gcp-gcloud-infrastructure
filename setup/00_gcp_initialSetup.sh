@@ -57,6 +57,12 @@ export GOOGLE_APPLICATION_CREDENTIALS="temp/"$PROJECT_ID.json
 CURRENT_BILLING_ACCOUNT_ID=$(gcloud beta billing accounts list --format="value(name)")
 gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$CURRENT_BILLING_ACCOUNT_ID
 
+export GIT_USERNAME
+export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
+read -p 'Git Global User Name :' GIT_USERNAME
+#read -p 'Git Global User Email :' GIT_USEREMAIL
+git config --global -e user.email $GIT_USEREMAIL
+git config --global user.name $GIT_USERNAME
 
 
 

@@ -99,15 +99,7 @@ export LANDINGZONE_FUNCTIONAL_REPO=$REPO_PATH$LZ_REPOPREFIX"-landing-zone-functi
 
 
 # Default Git git config --global -e user.email a.dinesh1901@gmail.com git config --global user.name dinesh-akrishnan
-export GIT_USERNAME
-export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
-read -p 'Git Global User Name :' GIT_USERNAME
-#read -p 'Git Global User Email :' GIT_USEREMAIL
 
-git config --global -e user.email $GIT_USEREMAIL
-git config --global user.name $GIT_USERNAME
 
-npm install mssql
-npm install shelljs
 
 
