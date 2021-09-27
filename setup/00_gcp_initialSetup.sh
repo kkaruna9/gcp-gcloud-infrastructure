@@ -40,10 +40,7 @@ projectCreation(){
   SA_NAME="sa-shopify"
   gcloud projects create $PROJECT_NAME --set-as-default
   gcloud config set project $PROJECT_NAME
-  gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify ServiceAccount"
-  PROJECT_ID=$(gcloud config get-value project)
-  gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
-  #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder"
+ #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/container.developer"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/kubernetes.engine.admin"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/storage.admin"
@@ -56,6 +53,10 @@ else
   echo ">>>>>>> PROJECT_ID QEA-Sandbox Doesnt Exist"
   projectCreation
 fi
+
+  gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify ServiceAccount"
+  PROJECT_ID=$(gcloud config get-value project)
+  gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 
 userEmail=$(gcloud auth list --format="value(account)")
 PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')
