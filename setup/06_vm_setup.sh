@@ -22,20 +22,20 @@ gcloud beta compute --project=$PROJECT_ID instances create $DEFAULT_CLUSTER_QEA_
 #sleep 60
 gcloud compute instances list
 gcloud compute ssh --zone $DEFAULT_ZONE_SERVER $DEFAULT_CLUSTER_QEA_SERVER --project $PROJECT_ID --command 'sudo apt update -y &&
-sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common &&
+sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y &&
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add - &&
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" &&
 sudo apt update -y &&
 sudo apt-cache policy docker-ce &&
-sudo apt install docker-ce &&
+sudo apt install docker-ce -y &&
 sudo systemctl status docker &&
 sudo docker info &&
 sudo docker run -d --name sonarqube -p 6002:9000 sonarqube:7.5-community &&
 sudo docker run --name reportingdashboard -p 3337:3337 --rm -i -t -d karthiknarayanpdec11/dashboardgcp:latest &&
-sudo docker run -d -p 4444:4444 --name selenium-hub selenium/hub
-sudo docker run -d --link selenium-hub:hub selenium/node-chrome
-sudo docker run -d --link selenium-hub:hub selenium/node-chrome
-sudo docker run -d --link selenium-hub:hub selenium/node-chrome
+sudo docker run -d -p 4444:4444 --name selenium-hub selenium/hub &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
  logout
  '
  #sudo docker pull elgalu/selenium &&
