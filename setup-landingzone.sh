@@ -14,6 +14,6 @@ source temp/gcp-gcloud-infrastructure/setup/06_vm_setup.sh
 wait
 source temp/gcp-gcloud-infrastructure/setup/05_push_source2workshop.sh &
 source temp/gcp-gcloud-infrastructure/setup/08_lz_mssql.sh &
-wat
+wait
 source temp/gcp-gcloud-infrastructure/setup/09_setConfig.sh
 

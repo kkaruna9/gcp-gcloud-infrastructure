@@ -37,16 +37,18 @@ export DEFAULT_BUCKET_REPORTS_DEST=$BUCKET_ID
 #else
  # echo "Failed to Delete Kubernetes  namespaces"
 #fi
-source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh &
-source temp/gcp-gcloud-infrastructure/tear-down/00_tear-down-storage.sh
-source temp/gcp-gcloud-infrastructure/tear-down/01_tear-down-source-repositories.sh
-source temp/gcp-gcloud-infrastructure/tear-down/02_tear-down-triggers.sh
-source temp/gcp-gcloud-infrastructure/tear-down/03_tear-down-config.sh
-source temp/gcp-gcloud-infrastructure/tear-down/04_tear-down-firewall.sh
-source temp/gcp-gcloud-infrastructure/tear-down/05_tear-down-vm.sh
-source temp/gcp-gcloud-infrastructure/tear-down/06_tear-down-clusters.sh
-source temp/gcp-gcloud-infrastructure/tear-down/07_tear-down-serviceaccount.sh
-source temp/gcp-gcloud-infrastructure/tear-down/08_tear-down-gcpservices.sh
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
+source temp/gcp-gcloud-infrastructure/tear-down/00_tear-down-storage.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/01_tear-down-source-repositories.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/02_tear-down-triggers.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/03_tear-down-config.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/04_tear-down-firewall.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/05_tear-down-vm.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/06_tear-down-clusters.sh &
+wait
+source temp/gcp-gcloud-infrastructure/tear-down/07_tear-down-serviceaccount.sh &
+source temp/gcp-gcloud-infrastructure/tear-down/08_tear-down-gcpservices.sh &
+wait
 source temp/gcp-gcloud-infrastructure/tear-down/09_tear-down-project.sh
 source temp/gcp-gcloud-infrastructure/tear-down/10_tear-down-folders.sh
 
