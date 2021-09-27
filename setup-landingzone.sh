@@ -5,9 +5,8 @@ echo "
 +----------------------------------------------------------------------------+
 "
 source temp/gcp-gcloud-infrastructure/setup/00_gcp_initialSetup.sh
-source temp/gcp-gcloud-infrastructure/setup/01_gcp_services.sh &
-source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh &
-wait
+source temp/gcp-gcloud-infrastructure/setup/01_gcp_services.sh
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 source temp/gcp-gcloud-infrastructure/setup/03_lz_create-repo.sh &
 source temp/gcp-gcloud-infrastructure/setup/04_lz_create_kubectl_clusters.sh &
 source temp/gcp-gcloud-infrastructure/setup/07_lz_create-bucket.sh &
