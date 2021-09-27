@@ -37,7 +37,7 @@ export DEFAULT_BUCKET_REPORTS_DEST=$BUCKET_ID
 #else
  # echo "Failed to Delete Kubernetes  namespaces"
 #fi
-source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
+source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh &
 source temp/gcp-gcloud-infrastructure/tear-down/00_tear-down-storage.sh
 source temp/gcp-gcloud-infrastructure/tear-down/01_tear-down-source-repositories.sh
 source temp/gcp-gcloud-infrastructure/tear-down/02_tear-down-triggers.sh
