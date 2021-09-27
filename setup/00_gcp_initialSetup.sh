@@ -39,13 +39,19 @@ projectCreation(){
   echo -n "Do you want to create a new project (y/n)? "
   read answer
   if [ "$answer" != "${answer#[Yy]}" ] ;then
+     echo -n "Are you sure to create a new project (y/n)? "
+    read sure
+    if [ "$sure" != "${sure#[Yy]}" ] ;then
       PROJECT_NAME="gcp-digital-shopify"$(shuf -i 1-100000 -n 1)
       gcloud projects create $PROJECT_NAME --set-as-default
-    gcloud config set project $PROJECT_NAME
+      gcloud config set project $PROJECT_NAME
     #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder"
     #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/container.developer"
     #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/kubernetes.engine.admin"
     #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/storage.admin"
+    else
+      echo -n "User doesnt want to create a new project"
+    fi
   else
     gcloud projects list
     echo -n "Select the PROJECT_ID from existing list and assign "
