@@ -65,8 +65,8 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
 }'
 
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatebuildid' --header 'Content-Type: application/json' --data-raw '{
-     "module":"PROJECTID",
-     "value":"'$(gcloud config get-value project)'",
+     "module": "PROJECTID",
+     "value": "'$(gcloud config get-value project)'"
 }'
 
 echo
