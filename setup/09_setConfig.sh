@@ -52,10 +52,13 @@ node temp/gcp-gcloud-infrastructure/setup/mssql-connect.js
 # --header 'Content-Type: application/json' \
 # --data '"'$value'"'
 
+echo -n "<<<<<<<<< /api/v1/gcp_dashboard_report/secrets/updateSA >>>>>>>>>>>>>>>>>>>>"
+
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updateSA' \
 --header 'Content-Type: application/json' \
 --data "@temp/$PROJECT_ID.json"
 
+echo -n "<<<<<<<<< /api/v1/gcp_dashboard_report/secrets/updatelandingzone >>>>>>>>>>>"
 
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatelandingzone' --header 'Content-Type: application/json' --data-raw '{
     "seleniumgridIP": "'$DEFAULT_GRID_IP'",
@@ -63,6 +66,8 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
      "sonarqubeIP": "'$DEFAULT_SONAR_IP'",
      "organizationName": "'$BUCKET_ID'"
 }'
+echo -n "<<<<<<<<< /api/v1/gcp_dashboard_report/secrets/updatebuildid >>>>>>>>>>>>>>>"
+
 
 curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/gcp_dashboard_report/secrets/updatebuildid' --header 'Content-Type: application/json' --data-raw '{
      "module": "PROJECTID",
