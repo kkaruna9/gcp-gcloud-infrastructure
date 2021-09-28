@@ -49,5 +49,5 @@ sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
 
 gcloud compute firewall-rules create sonar-firewall-rule --allow tcp:6002 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
 gcloud compute firewall-rules create report-firewall-rule --allow tcp:3337 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
-gcloud compute firewall-rules create zalenium-firewall-rule --allow tcp:4444 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
-gcloud compute firewall-rules create zalenium-child-firewall-rule --allow tcp:4445 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
+gcloud compute firewall-rules create salenium-firewall-rule --allow tcp:4444 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
+gcloud compute firewall-rules create salenium-child-firewall-rule --allow tcp:4445 --source-tags=$DEFAULT_CLUSTER_QEA_SERVER --source-ranges=0.0.0.0/0 --description="For testing purpose"
