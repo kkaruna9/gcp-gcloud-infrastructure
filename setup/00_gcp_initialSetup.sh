@@ -89,7 +89,7 @@ export GIT_USERNAME=gcp-digital-shopify
 export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
 #read -p 'Git Global User Name :' GIT_USERNAME
 #read -p 'Git Global User Email :' GIT_USEREMAIL
-git config --global -e user.email $GIT_USEREMAIL
+git config --global user.email $GIT_USEREMAIL
 git config --global user.name $GIT_USERNAME
 
 
