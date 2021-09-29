@@ -49,6 +49,6 @@ source temp/gcp-gcloud-infrastructure/tear-down/06_tear-down-clusters.sh
 source temp/gcp-gcloud-infrastructure/tear-down/07_tear-down-serviceaccount.sh
 #source temp/gcp-gcloud-infrastructure/tear-down/08_tear-down-gcpservices.sh
 #wait
-source temp/gcp-gcloud-infrastructure/tear-down/09_tear-down-project.sh
+//source temp/gcp-gcloud-infrastructure/tear-down/09_tear-down-project.sh
 source temp/gcp-gcloud-infrastructure/tear-down/10_tear-down-folders.sh
 
