@@ -15,7 +15,6 @@ gcloud beta runtime-config configs variables set DEFAULT_ZONE_APP $DEFAULT_ZONE_
 gcloud beta runtime-config configs variables set DEFAULT_ZONE_SERVER $DEFAULT_ZONE_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set PROJECT_NAME $PROJECT_NAME --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set PROJECT_NUMBER $PROJECT_NUMBER --config-name $DEFAULT_CONFIG_NAME --is-text
-
 gcloud beta runtime-config configs variables set PROJECT_ID $PROJECT_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
@@ -86,7 +85,7 @@ echo ">>>>>>>>>>>>>>>> GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXT
 echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
 echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
 echo ">>>>>>>>>>>>>>>> GCP Workshop Repositories"
-gcloud source repos listgcloud source repos list --format="value(url)"
+gcloud source repos list --format="value(url)"
 echo
 echo
 echo

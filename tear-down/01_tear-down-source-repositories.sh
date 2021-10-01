@@ -5,15 +5,15 @@ echo "
 | Deleting cloud source repositories created for workshop.                   |
 +----------------------------------------------------------------------------+
 "
-source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
+#source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 
-gcloud -q source repos delete $LZ_REPOPREFIX-landling-zone
-if [ $? -eq 0 ]
-then
-  echo "Deleted '$LZ_REPOPREFIX-landling-zone' repository"
-else
-  echo "Failed to delete '$LZ_REPOPREFIX-landling-zone' repository"
-fi
+#gcloud -q source repos delete $LZ_REPOPREFIX-landling-zone
+#if [ $? -eq 0 ]
+#then
+  #echo "Deleted '$LZ_REPOPREFIX-landling-zone' repository"
+#else
+  #echo "Failed to delete '$LZ_REPOPREFIX-landling-zone' repository"
+#fi
 
 gcloud -q source repos delete $LZ_REPOPREFIX-gcp-backend
 if [ $? -eq 0 ]
