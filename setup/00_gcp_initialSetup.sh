@@ -76,7 +76,7 @@ PROJECT_ID=$(gcloud config get-value project)
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/container.developer"
-gcloud iam roles create "roles/compute.instanceAdmin.v1" --organization=$SA_NAME --file=temp/gcp-gcloud-infrastructure/computeInstance.yaml
+gcloud iam roles create "roles/compute.instanceAdmin.v1" --organization=$SA_NAME --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
 
 
 userEmail=$(gcloud auth list --format="value(account)")
