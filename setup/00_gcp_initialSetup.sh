@@ -42,7 +42,8 @@ projectCreation(){
      echo -n "Are you sure to create a new project (y/n)? "
     read sure
     if [ "$sure" != "${sure#[Yy]}" ] ;then
-      PROJECT_NAME="gcp-digital-shopify"$(shuf -i 1-100000 -n 1)
+      RANNUM=$(shuf -i 1-100000 -n 1)
+      PROJECT_NAME="gcp-digital-shopify"$RANNUM
       gcloud projects create $PROJECT_NAME --set-as-default
       gcloud config set project $PROJECT_NAME
     #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder"
@@ -76,7 +77,7 @@ PROJECT_ID=$(gcloud config get-value project)
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/container.developer"
-gcloud iam roles create "roles/compute.instanceAdmin.v1" --organization=$SA_NAME --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
+gcloud iam roles create $RANNUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
 
 
 userEmail=$(gcloud auth list --format="value(account)")
