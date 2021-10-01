@@ -9,7 +9,7 @@ echo "
   source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
   source temp/gcp-gcloud-infrastructure/setup/03_lz_create-repo.sh
 
-  echo First Group:
+  echo cluster_vm:
   {
     source temp/gcp-gcloud-infrastructure/setup/04_lz_create_kubectl_clusters.sh &
     source temp/gcp-gcloud-infrastructure/setup/06_vm_setup.sh
