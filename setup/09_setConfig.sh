@@ -79,26 +79,24 @@ echo
 echo
 echo
 echo
-echo " GCP Workshop - Infrastructure Setup Checklist"
+echo ">>>>>>>>>>>>>>>> GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
-echo "GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
-echo "GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
-echo "GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
-echo "GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
-echo "GCP Workshop Repository Creations      = COMPLETED"
-echo "GCP Workshop Storage Bucket Name       = "$BUCKET_ID
-echo "GCP Workshop Quality Gate Server IP    = "$DEFAULT_SONAR_IP
-echo "GCP Workshop Reporting Dashboard IP    = "$DEFAULT_DASHBOARD_IP
-echo "GCP Workshop Grid Server IP            = "$DEFAULT_GRID_IP
-echo "GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
-echo "GCP Workshop Database Creation         = COMPLETED"
-echo "GCP Workshop Global Variables Setup    = COMPLETED"
-echo "GCP Workshop Environment Setup         = COMPLETED"
-echo "GCP Workshop Infra Update to Dashboard = COMPLETED"
-echo "GCP Workshop Secrets Updating          = COMPLETED"
-echo "GCP Workshop Landing Zone Update       = COMPLETED"
-
-
+echo ">>>>>>>>>>>>>>>> GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
+echo ">>>>>>>>>>>>>>>> GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Repositories"
+gcloud source repos listgcloud source repos list --format="value(url)"
+echo
+echo
+echo
+echo
+echo ">>>>>>>>>>>>>>>> GCP Workshop Storage Bucket Name       = "$BUCKET_ID
+echo ">>>>>>>>>>>>>>>> GCP Workshop Quality Gate Server IP    = http://"$DEFAULT_SONAR_IP":6002"
+echo ">>>>>>>>>>>>>>>> GCP Workshop Reporting Dashboard IP    = http://"$DEFAULT_DASHBOARD_IP":3337"
+echo ">>>>>>>>>>>>>>>> GCP Workshop Grid Server IP            = http://"$DEFAULT_GRID_IP":4444"
+echo ">>>>>>>>>>>>>>>> GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Database Creation         = COMPLETED"
 echo " -------------------------------------------------------------"
 echo
 echo
