@@ -86,7 +86,6 @@
       "compute.routes.list",
       "compute.serviceAttachments.get",
       "compute.serviceAttachments.list",
-      "compute.snapshots.*",
       "compute.sslCertificates.get",
       "compute.sslCertificates.list",
       "compute.sslPolicies.get",
