@@ -43,7 +43,6 @@
       "compute.instances.*",
       "compute.interconnectAttachments.get",
       "compute.interconnectAttachments.list",
-      "compute.interconnectLocations.*",
       "compute.interconnects.get",
       "compute.interconnects.list",
       "compute.licenseCodes.*",
