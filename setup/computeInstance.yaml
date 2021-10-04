@@ -61,7 +61,6 @@
       "compute.regionHealthCheckServices.list",
       "compute.regionHealthChecks.get",
       "compute.regionHealthChecks.list",
-      "compute.regionNetworkEndpointGroups.*",
       "compute.regionNotificationEndpoints.get",
       "compute.regionNotificationEndpoints.list",
       "compute.regionOperations.get",
