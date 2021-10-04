@@ -37,7 +37,6 @@
       "compute.httpsHealthChecks.get",
       "compute.httpsHealthChecks.list",
       "compute.images.*",
-      "compute.instanceGroupManagers.*",
       "compute.instanceGroups.*",
       "compute.instanceTemplates.*",
       "compute.instances.*",
