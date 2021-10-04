@@ -38,7 +38,6 @@
       "compute.httpsHealthChecks.list",
       "compute.images.*",
       "compute.instanceGroups.*",
-      "compute.instanceTemplates.*",
       "compute.instances.*",
       "compute.interconnectAttachments.get",
       "compute.interconnectAttachments.list",
