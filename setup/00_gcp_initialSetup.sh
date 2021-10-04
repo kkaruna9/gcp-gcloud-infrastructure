@@ -36,21 +36,17 @@ fi
 
 '
 projectCreation(){
+  RANNUM=$(shuf -i 1-100000 -n 1)
   echo -n "Do you want to create a new project (y/n)? "
   read answer
   if [ "$answer" != "${answer#[Yy]}" ] ;then
      echo -n "Are you sure to create a new project (y/n)? "
     read sure
     if [ "$sure" != "${sure#[Yy]}" ] ;then
-      RANNUM=$(shuf -i 1-100000 -n 1)
       PROJECT_NAME="gcp-digital-shopify"$RANNUM
       gcloud projects create $PROJECT_NAME --set-as-default
       gcloud config set project $PROJECT_NAME
-    #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder"
-    #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/container.developer"
-    #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/kubernetes.engine.admin"
-    #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@cloudbuild.gserviceaccount.com --role=roles/storage.admin"
-    else
+  else
       echo -n "User doesnt want to create a new project"
     fi
   else
@@ -59,9 +55,8 @@ projectCreation(){
     read -p "Project ID :" PROJECT_NAME
     #gcloud projects create $PROJECT_NAME --set-as-default
     gcloud config set project $PROJECT_NAME
+    gcloud config set project $PROJECT_NAME
   fi
-
-
 }
 
 if gcloud projects list --format="value(PROJECT_ID)" | grep -q 'qea-sandbox'; then
@@ -77,7 +72,15 @@ PROJECT_ID=$(gcloud config get-value project)
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/container.developer"
-gcloud iam roles create $RANNUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
+#gcloud iam roles create $RANNUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
+gcloud projects add-iam-policy-binding $PROJECT_ID --member "serviceAccount:chutch@support-team-b.iam.gserviceaccount.com" --role "roles/compute.instanceAdmin.v1"
+PROJECT_NUM=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)" --project=$PROJECT_ID)
+SERVICE_ACCOUNT=${PROJECT_NUM}@cloudbuild.gserviceaccount.com
+gcloud iam roles create $PROJECT_NUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
+gcloud iam service-accounts create "gcp"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --display-name="Digital Shopify ServiceAccount"
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/container.developer"
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/iam.serviceAccountUser"
 
 
 userEmail=$(gcloud auth list --format="value(account)")
