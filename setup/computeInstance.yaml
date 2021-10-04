@@ -122,7 +122,6 @@
       "compute.zoneOperations.list",
       "compute.zones.*",
       "resourcemanager.projects.get",
-      "resourcemanager.projects.list",
       "serviceusage.quotas.get",
       "serviceusage.services.get",
       "serviceusage.services.list",
