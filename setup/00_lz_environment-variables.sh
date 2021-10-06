@@ -25,7 +25,7 @@ export DEFAULT_ZONE_CICD="us-central1-c"
 export DEFAULT_CLUSTER_QEA_SERVER="gcp-qea-server"
 export DEFAULT_CLUSTER_QEA_APP="gcp-qea-app"
 export DEFAULT_CLUSTER_QEA_CICD="gcp-qea-cicd"
-export DEFAULT_CLUSTER_VERSION="1.19.13-gke.701"
+export DEFAULT_CLUSTER_VERSION="1.19.13-gke.1200"
 export DEFAULT_CLUSTER_APP="gcp-app-server"
 export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
 
