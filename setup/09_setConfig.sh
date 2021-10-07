@@ -93,7 +93,7 @@ echo
 echo ">>>>>>>>>>>>>>>> GCP Workshop Storage Bucket Name       = "$BUCKET_ID
 echo ">>>>>>>>>>>>>>>> GCP Workshop Quality Gate Server IP    = http://"$DEFAULT_SONAR_IP":6002"
 echo ">>>>>>>>>>>>>>>> GCP Workshop Reporting Dashboard IP    = http://"$DEFAULT_DASHBOARD_IP":3337"
-echo ">>>>>>>>>>>>>>>> GCP Workshop Grid Server IP            = http://"$DEFAULT_GRID_IP":4444"
+echo ">>>>>>>>>>>>>>>> GCP Workshop Grid Server IP            = http://"$DEFAULT_GRID_IP":4444/grid/console"
 echo ">>>>>>>>>>>>>>>> GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
 echo ">>>>>>>>>>>>>>>> GCP Workshop Database Creation         = COMPLETED"
 echo " -------------------------------------------------------------"
