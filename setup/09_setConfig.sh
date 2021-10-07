@@ -76,8 +76,6 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
 echo
 echo
 echo
-echo
-echo
 echo ">>>>>>>>>>>>>>>> GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
 echo ">>>>>>>>>>>>>>>> GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
@@ -87,9 +85,6 @@ echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_A
 echo ">>>>>>>>>>>>>>>> GCP Workshop Repositories"
 gcloud source repos list --format="value(url)"
 echo
-echo
-echo
-echo
 echo ">>>>>>>>>>>>>>>> GCP Workshop Storage Bucket Name       = "$BUCKET_ID
 echo ">>>>>>>>>>>>>>>> GCP Workshop Quality Gate Server IP    = http://"$DEFAULT_SONAR_IP":6002"
 echo ">>>>>>>>>>>>>>>> GCP Workshop Reporting Dashboard IP    = http://"$DEFAULT_DASHBOARD_IP":3337"
@@ -97,7 +92,6 @@ echo ">>>>>>>>>>>>>>>> GCP Workshop Grid Server IP            = http://"$DEFAULT
 echo ">>>>>>>>>>>>>>>> GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
 echo ">>>>>>>>>>>>>>>> GCP Workshop Database Creation         = COMPLETED"
 echo " -------------------------------------------------------------"
-echo
 echo
 echo
 echo
