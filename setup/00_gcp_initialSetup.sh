@@ -68,8 +68,14 @@ projectSetup(){
 #fi
 
 projectSetup
+isSAExist=$(gcloud iam service-accounts list --format="value(email)" --filter="name ~ .*sa-shopify@qea-sandbox.iam.gserviceaccount.com.*")
+if [ "sa-shopify@qea-sandbox.iam.gserviceaccount.com" != "$isSAExist" ] ;then
 SA_NAME="sa-shopify"
 gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify ServiceAccount"
+else
+echo ">>>>>>> SERVICE ACCOUNT Already Exist"
+fi
+
 PROJECT_ID=$(gcloud config get-value project)
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/container.developer"
