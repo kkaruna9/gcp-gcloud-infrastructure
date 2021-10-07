@@ -84,7 +84,7 @@ PROJECT_NUM=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJEC
 SERVICE_ACCOUNT=${PROJECT_NUM}@cloudbuild.gserviceaccount.com
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 #gcloud iam roles create $PROJECT_NUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
-gcloud iam service-accounts create "gcp"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --display-name="Digital Shopify ServiceAccount"
+#gcloud iam service-accounts create "gcp"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --display-name="Digital Shopify ServiceAccount"
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/container.developer"
 gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/iam.serviceAccountUser"
