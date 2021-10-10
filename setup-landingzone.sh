@@ -22,9 +22,9 @@ date +"%T" && {
   }
   echo connect:
   {
-    source temp/gcp-gcloud-infrastructure/setup/08_lz_mssql.sh
+    source temp/gcp-gcloud-infrastructure/setup/08_lz_mssql.sh &
     source temp/gcp-gcloud-infrastructure/setup/05_push_source2workshop.sh
     wait
   }
   source temp/gcp-gcloud-infrastructure/setup/09_setConfig.sh
-} && date +"%T"
+}  && date +"%T"
