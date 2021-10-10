@@ -13,7 +13,8 @@ gcloud services enable sourcerepo.googleapis.com
 #else
 #  echo "Failed to create '$LZ_REPOPREFIX-landing-zone' repository"
 #fi
-
+(gsutil -mq cp -r gs://lz-artifacts-qea-sandbox/gcpworkshop-code-repos temp) |
+(
 gcloud -q source repos create $LZ_REPOPREFIX-gcp-frontend
 if [ $? -eq 0 ]
 then
@@ -85,3 +86,4 @@ then
 else
   echo "Failed to create '$LZ_REPOPREFIX-landing-zone-functional' repository"
 fi
+)

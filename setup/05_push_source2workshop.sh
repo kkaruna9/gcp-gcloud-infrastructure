@@ -9,8 +9,9 @@ echo "
 
 #gsutil -mq cp -r gs://gd-investments-1000311198.appspot.com/gcpworkshop-code-repos .
 #gsutil -mq cp -r gs://$PROJECT_ID/gcpworkshop-code-repos .
-gsutil -mq cp -r gs://lz-artifacts-qea-sandbox/gcpworkshop-code-repos temp
 
+
+#commented to carry in diff gsutil -mq cp -r gs://lz-artifacts-qea-sandbox/gcpworkshop-code-repos temp
 cd temp/gcpworkshop-code-repos
 
 #frontend repo

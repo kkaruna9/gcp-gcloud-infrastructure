@@ -19,6 +19,7 @@ else
 fi: '
 
 #sleep 60
+gcloud beta compute --project=$PROJECT_ID instances create $DEFAULT_CLUSTER_QEA_SERVER --zone=$DEFAULT_ZONE_SERVER --machine-type=e2-standard-8 --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=$SERVICE_ACCOUNT --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server,https-server --image=debian-10-buster-v20210916 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=$DEFAULT_CLUSTER_QEA_SERVER --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
 
 bash -c external_vmip="";
 while [ -z $external_vmip ];

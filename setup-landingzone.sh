@@ -16,8 +16,7 @@ echo "
   echo heart:
   {
     source temp/gcp-gcloud-infrastructure/setup/04_lz_create_kubectl_clusters.sh &
-    source temp/gcp-gcloud-infrastructure/setup/06_vm_setup.sh &
-    source temp/gcp-gcloud-infrastructure/setup/07_lz_create-bucket.sh
+    source temp/gcp-gcloud-infrastructure/setup/06_vm_setup.sh
     wait
   }
   echo connect:
