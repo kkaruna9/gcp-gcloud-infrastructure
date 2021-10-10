@@ -4,7 +4,8 @@ echo "
 |                   GCP - OneShot - Infrastructure Setup                     |
 +----------------------------------------------------------------------------+
 "
-date +"%T" && {
+export execution_starttime=$(date +"%T")
+{
   source temp/gcp-gcloud-infrastructure/setup/00_gcp_initialSetup.sh
   source temp/gcp-gcloud-infrastructure/setup/01_gcp_services.sh
   source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
@@ -27,4 +28,9 @@ date +"%T" && {
     wait
   }
   source temp/gcp-gcloud-infrastructure/setup/09_setConfig.sh
-}  && date +"%T"
+}
+export execution_endtime=$(date +"%T")
+
+echo "LandlingZone Script Execution Start time : "$execution_starttime
+echo "LandlingZone Script Execution End time : "$execution_endtime
+
