@@ -4,6 +4,7 @@ echo "
 |                   GCP - OneShot - Infrastructure Setup                     |
 +----------------------------------------------------------------------------+
 "
+date +"%T" && {
   source temp/gcp-gcloud-infrastructure/setup/00_gcp_initialSetup.sh
   source temp/gcp-gcloud-infrastructure/setup/01_gcp_services.sh
   source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
@@ -26,4 +27,4 @@ echo "
     wait
   }
   source temp/gcp-gcloud-infrastructure/setup/09_setConfig.sh
-
+} && date +"%T"
