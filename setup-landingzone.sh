@@ -30,7 +30,7 @@ export execution_starttime=$(date +"%T")
   source temp/gcp-gcloud-infrastructure/setup/09_setConfig.sh
 }
 export execution_endtime=$(date +"%T")
-
-echo "LandlingZone Script Execution Start time : "$execution_starttime
-echo "LandlingZone Script Execution End time : "$execution_endtime
+echo " ------------------------------------------------------------------------------------------------------"
+echo "Total IAAS & PAAS setting up time : Start time : "$execution_starttime " End Time : "$execution_endtime
+echo " ------------------------------------------------------------------------------------------------------"
 
