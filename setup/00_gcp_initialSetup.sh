@@ -107,12 +107,12 @@ CURRENT_BILLING_ACCOUNT_ID=$(gcloud beta billing accounts list --format="value(n
 gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$CURRENT_BILLING_ACCOUNT_ID
 else
 if [ "$PROJECT_ID" != "qea-sandbox" ] ;then
-  CURRENT_BILLING_ACCOUNT_ID="017FA4-2FD087-C6F4E7"
-  gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$CURRENT_BILLING_ACCOUNT_ID
-else
   echo -n "Please copy & paste the billing account from above list : "
   read copyBill
   gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$copyBill
+else
+  CURRENT_BILLING_ACCOUNT_ID="017FA4-2FD087-C6F4E7"
+  gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$CURRENT_BILLING_ACCOUNT_ID
 fi
 fi
 
