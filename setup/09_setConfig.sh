@@ -15,7 +15,6 @@ gcloud beta runtime-config configs variables set DEFAULT_ZONE_APP $DEFAULT_ZONE_
 gcloud beta runtime-config configs variables set DEFAULT_ZONE_SERVER $DEFAULT_ZONE_SERVER --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set PROJECT_NAME $PROJECT_NAME --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set PROJECT_NUMBER $PROJECT_NUMBER --config-name $DEFAULT_CONFIG_NAME --is-text
-
 gcloud beta runtime-config configs variables set PROJECT_ID $PROJECT_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 gcloud beta runtime-config configs variables set BUCKET_ID $BUCKET_ID --config-name $DEFAULT_CONFIG_NAME --is-text
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_QEA_SERVER --zone $DEFAULT_ZONE_SERVER --project $PROJECT_ID
@@ -77,30 +76,22 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
 echo
 echo
 echo
-echo
-echo
-echo " GCP Workshop - Infrastructure Setup Checklist"
+echo ">>>>>>>>>>>>>>>> GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
-echo "GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
-echo "GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
-echo "GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
-echo "GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
-echo "GCP Workshop Repository Creations      = COMPLETED"
-echo "GCP Workshop Storage Bucket Name       = "$BUCKET_ID
-echo "GCP Workshop Quality Gate Server IP    = "$DEFAULT_SONAR_IP
-echo "GCP Workshop Reporting Dashboard IP    = "$DEFAULT_DASHBOARD_IP
-echo "GCP Workshop Grid Server IP            = "$DEFAULT_GRID_IP
-echo "GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
-echo "GCP Workshop Database Creation         = COMPLETED"
-echo "GCP Workshop Global Variables Setup    = COMPLETED"
-echo "GCP Workshop Environment Setup         = COMPLETED"
-echo "GCP Workshop Infra Update to Dashboard = COMPLETED"
-echo "GCP Workshop Secrets Updating          = COMPLETED"
-echo "GCP Workshop Landing Zone Update       = COMPLETED"
-
-
-echo " -------------------------------------------------------------"
+echo ">>>>>>>>>>>>>>>> GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
+echo ">>>>>>>>>>>>>>>> GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Repositories"
+gcloud source repos list --format="value(url)"
 echo
+echo ">>>>>>>>>>>>>>>> GCP Workshop Storage Bucket Name       = "$BUCKET_ID
+echo ">>>>>>>>>>>>>>>> GCP Workshop Quality Gate Server IP    = http://"$DEFAULT_SONAR_IP":6002"
+echo ">>>>>>>>>>>>>>>> GCP Workshop Reporting Dashboard IP    = http://"$DEFAULT_DASHBOARD_IP":3337"
+echo ">>>>>>>>>>>>>>>> GCP Workshop Grid Server IP            = http://"$DEFAULT_GRID_IP":4444/grid/console"
+echo ">>>>>>>>>>>>>>>> GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
+echo ">>>>>>>>>>>>>>>> GCP Workshop Database Creation         = COMPLETED"
+echo " -------------------------------------------------------------"
 echo
 echo
 echo

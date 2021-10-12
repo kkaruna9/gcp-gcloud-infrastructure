@@ -4,21 +4,21 @@ echo "
 | Teardown GCP Components, Services, Buckets, Servers and repositories.      |
 +----------------------------------------------------------------------------+
 "
-:'
-export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
-export DEFAULT_CLUSTER_QEA_SERVER="gcp-qea-server"
-export DEFAULT_CLUSTER_QEA_APP="gcp-qea-app"
-export DEFAULT_CLUSTER_QEA_CICD="gcp-qea-cicd"
-export KUBECTL_SONARQUBE="sonarqube"
-export KUBECTL_GRID="zalenium"
-export KUBECTL_GRID_RELEASE="release-zalenium"
-export KUBECTL_MSSQL="mssql-container"
-export KUBECTL_RDASHBAORD="reporting-dashboard"
-export KUBECTL_FRONTEND_APP="frontend-app"
-export DEFAULT_ZONE="us-central1-c"
-export DEFAULT_REGION="US-EAST1"
-export DEFAULT_BUCKET_REPORTS_DEST=$BUCKET_ID
-'
+#
+#export DEFAULT_CONFIG_NAME="WORKSHOP_CONFIG"
+#export DEFAULT_CLUSTER_QEA_SERVER="gcp-qea-server"
+#export DEFAULT_CLUSTER_QEA_APP="gcp-qea-app"
+#export DEFAULT_CLUSTER_QEA_CICD="gcp-qea-cicd"
+#export KUBECTL_SONARQUBE="sonarqube"
+#export KUBECTL_GRID="zalenium"
+#export KUBECTL_GRID_RELEASE="release-zalenium"
+#export KUBECTL_MSSQL="mssql-container"
+#export KUBECTL_RDASHBAORD="reporting-dashboard"
+#export KUBECTL_FRONTEND_APP="frontend-app"
+#export DEFAULT_ZONE="us-central1-c"
+#export DEFAULT_REGION="US-EAST1"
+#export DEFAULT_BUCKET_REPORTS_DEST=$BUCKET_ID
+
 
 
 
@@ -37,6 +37,13 @@ export DEFAULT_BUCKET_REPORTS_DEST=$BUCKET_ID
 #else
  # echo "Failed to Delete Kubernetes  namespaces"
 #fi
+
+gcloud projects list
+echo -n "Select the PROJECT_ID from existing list and assign, please "
+read -p "Project ID :" PROJECT_ID
+#gcloud projects create $PROJECT_NAME --set-as-default
+gcloud config set project $PROJECT_ID
+
 source temp/gcp-gcloud-infrastructure/setup/02_lz_environment-variables.sh
 source temp/gcp-gcloud-infrastructure/tear-down/00_tear-down-storage.sh
 source temp/gcp-gcloud-infrastructure/tear-down/01_tear-down-source-repositories.sh

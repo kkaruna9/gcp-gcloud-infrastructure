@@ -17,6 +17,7 @@ echo "
 # Common  Variables
 
 export PROJECT_ID=$(gcloud config get-value project)
+export PROJECT_NAME=$(gcloud projects list --filter="$PROJECT_ID" --format="value(NAME)" --project=$PROJECT_ID)
 export DEFAULT_ZONE="us-central1-c"
 export DEFAULT_REGION="US-EAST1"
 export DEFAULT_ZONE_SERVER="europe-west4-a" # "us-east1-b"
