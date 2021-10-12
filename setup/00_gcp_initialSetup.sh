@@ -98,17 +98,23 @@ export GOOGLE_APPLICATION_CREDENTIALS="temp/"$PROJECT_ID.json
 
 echo -n "GCP Workshop >> List of Billing Accounts"
 gcloud beta billing accounts list --format="value(name)"
+
+
 echo -n "Do you want to select by default first billing account from the list (y/n)? "
 read bill
 if [ "$bill" != "${bill#[Yy]}" ] ;then
 CURRENT_BILLING_ACCOUNT_ID=$(gcloud beta billing accounts list --format="value(name)[1]")
 gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$CURRENT_BILLING_ACCOUNT_ID
 else
-echo -n "Please copy & paste the billing account from above list"
-read copyBill
-gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$copyBill
+if [ "$PROJECT_ID" != "qea-sandbox" ] ;then
+  CURRENT_BILLING_ACCOUNT_ID="017FA4-2FD087-C6F4E7"
+  gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$CURRENT_BILLING_ACCOUNT_ID
+else
+  echo -n "Please copy & paste the billing account from above list : "
+  read copyBill
+  gcloud alpha billing accounts projects link $PROJECT_ID --billing-account=$copyBill
 fi
-
+fi
 
 export GIT_USERNAME=gcp-digital-shopify
 export GIT_USEREMAIL=$(gcloud auth list --format="value(account)")
