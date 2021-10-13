@@ -76,26 +76,24 @@ curl --location --request POST 'http://'"${DEFAULT_DASHBOARD_IP}"':3337/api/v1/g
 echo
 echo
 echo
-echo ">>>>>>>>>>>>>>>> GCP Workshop - Infrastructure Setup Checklist"
+echo "GCP Workshop - Infrastructure Setup Checklist"
 echo " -------------------------------------------------------------"
-echo ">>>>>>>>>>>>>>>> GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
-echo ">>>>>>>>>>>>>>>> GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
-echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
-echo ">>>>>>>>>>>>>>>> GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
-echo ">>>>>>>>>>>>>>>> GCP Workshop Repositories"
+echo "GCP Workshop VM Name                   = "$DEFAULT_CLUSTER_QEA_SERVER
+echo "GCP Workshop VM IPAddress              = "$DEFAULT_VM_EXTERNAL_IP
+echo "GCP Workshop Cluster Name              = "$DEFAULT_CLUSTER_QEA_APP
+echo "GCP Workshop Cluster Zone              = "$DEFAULT_ZONE_APP
+echo "GCP Workshop Repositories"
 gcloud source repos list --format="value(url)"
-echo
-echo ">>>>>>>>>>>>>>>> GCP Workshop Storage Bucket Name       = "$BUCKET_ID
-echo ">>>>>>>>>>>>>>>> GCP Workshop Quality Gate Server IP    = http://"$DEFAULT_SONAR_IP":6002"
-echo ">>>>>>>>>>>>>>>> GCP Workshop Reporting Dashboard IP    = http://"$DEFAULT_DASHBOARD_IP":3337"
-echo ">>>>>>>>>>>>>>>> GCP Workshop Grid Server IP            = http://"$DEFAULT_GRID_IP":4444/grid/console"
-echo ">>>>>>>>>>>>>>>> GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
-echo ">>>>>>>>>>>>>>>> GCP Workshop Database Creation         = COMPLETED"
+echo "GCP Workshop Storage Bucket Name       = "$BUCKET_ID
+echo "GCP Workshop Quality Gate Server IP    = http://"$DEFAULT_SONAR_IP":6002"
+echo "GCP Workshop Reporting Dashboard IP    = http://"$DEFAULT_DASHBOARD_IP":3337"
+echo "GCP Workshop Grid Server IP            = http://"$DEFAULT_GRID_IP":4444/grid/console"
+echo "GCP Workshop MsSQL Database Server IP  = "$DEFAULT_MSSQL_IP
+echo "GCP Workshop Database Creation         = COMPLETED"
 echo " -------------------------------------------------------------"
 echo
 echo
 echo
-
 #gcloud container clusters get-credentials $DEFAULT_CLUSTER_APP --zone $DEFAULT_ZONE --project $PROJECT_ID
 #DEFAULT_APPLICATION_HOST=$(kubectl get svc $KUBECTL_FRONTEND_APP --template="{{range .status.loadBalancer.ingress}}{{.ip}}{{end}}");
 #echo "DEFAULT_APPLICATION_HOST = "$DEFAULT_APPLICATION_HOST
