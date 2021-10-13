@@ -75,23 +75,24 @@ gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify Serv
 else
 echo ">>>>>>> SERVICE ACCOUNT Already Exist"
 fi
-
+PROJECT_NUM=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)" --project=$PROJECT_ID)
 PROJECT_ID=$(gcloud config get-value project)
+SERVICE_ACCOUNT=${PROJECT_NUM}@cloudbuild.gserviceaccount.com
+userEmail=$(gcloud auth list --format="value(account)")
+PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')
+
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
 #gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/container.developer"
 #gcloud iam roles create $RANNUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
-PROJECT_NUM=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)" --project=$PROJECT_ID)
-SERVICE_ACCOUNT=${PROJECT_NUM}@cloudbuild.gserviceaccount.com
-gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
 #gcloud iam roles create $PROJECT_NUM --project=${PROJECT_ID} --file=temp/gcp-gcloud-infrastructure/setup/computeInstance.yaml
 #gcloud iam service-accounts create "gcp"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --display-name="Digital Shopify ServiceAccount"
-gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1"
-gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/container.developer"
-gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/iam.serviceAccountUser"
-userEmail=$(gcloud auth list --format="value(account)")
-PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format='get(projectNumber)')
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner"
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/iam.serviceAccountUser" &&
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1" &&
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/container.developer" &&
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/cloudbuild.workerPoolUser"
 export SERVICE_ACCOUNT=$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com"
-gcloud iam service-accounts keys create $PROJECT_ID.json --iam-account=$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com
+gcloud iam service-accounts keys create $PROJECT_ID.json --iam-account=$SERVICE_ACCOUNT
 mv $PROJECT_ID.json temp
 export SA_NAME=$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com
 export GOOGLE_APPLICATION_CREDENTIALS="temp/"$PROJECT_ID.json
