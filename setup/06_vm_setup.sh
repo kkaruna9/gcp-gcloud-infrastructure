@@ -39,9 +39,10 @@ sudo docker info &&
 sudo docker run -d --name sonarqube -p 6002:9000 sonarqube:7.5-community &&
 sudo docker run --name reportingdashboard -p 3337:3337 --rm -i -t -d karthiknarayanpdec11/dashboardgcp:latest &&
 sudo docker run -d -p 4444:4444 --name selenium-hub selenium/hub:3.141.59 &&
-sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
-sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
-sudo docker run -d --link selenium-hub:hub selenium/node-chrome &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome:3.141.59 &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome:3.141.59 &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome:3.141.59 &&
+sudo docker run -d --link selenium-hub:hub selenium/node-chrome:3.141.59-yttrium &&
  logout
  '
  #sudo docker pull elgalu/selenium &&
