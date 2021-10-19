@@ -68,9 +68,9 @@ projectSetup() {
 #fi
 
 projectSetup
-isSAExist=$(gcloud iam service-accounts list --format="value(email)" --filter="name ~ .*sa-shopify@qea-sandbox.iam.gserviceaccount.com.*")
+SA_NAME="sa-shopify"
+isSAExist=$(gcloud iam service-accounts list --format="value(email)" --filter="name ~ .*:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com.*")
 if [ "sa-shopify@qea-sandbox.iam.gserviceaccount.com" != "$isSAExist" ]; then
-  SA_NAME="sa-shopify"
   gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify ServiceAccount"
 else
   echo ">>>>>>> SERVICE ACCOUNT Already Exist"
@@ -88,10 +88,10 @@ PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format='get(projectNum
 #gcloud iam service-accounts create "gcp"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --display-name="Digital Shopify ServiceAccount"
 {
     gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" --role="roles/owner" &&
-    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/iam.serviceAccountUser" &&
-    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1" &&
-    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/container.developer" &&
-    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUM"@cloudbuild.gserviceaccount.com" --role="roles/cloudbuild.workerPoolUser"
+    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUMBER"@cloudbuild.gserviceaccount.com" --role="roles/iam.serviceAccountUser" &&
+    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUMBER"@cloudbuild.gserviceaccount.com" --role="roles/compute.instanceAdmin.v1" &&
+    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUMBER"@cloudbuild.gserviceaccount.com" --role="roles/container.developer" &&
+    gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:"$PROJECT_NUMBER"@cloudbuild.gserviceaccount.com" --role="roles/cloudbuild.workerPoolUser"
 }
 export SERVICE_ACCOUNT=$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com"
 gcloud iam service-accounts keys create $PROJECT_ID.json --iam-account=$SERVICE_ACCOUNT
