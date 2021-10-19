@@ -70,7 +70,7 @@ projectSetup() {
 projectSetup
 SA_NAME="sa-shopify"
 isSAExist=$(gcloud iam service-accounts list --format="value(email)" --filter="name ~ .*:"$SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com.*")
-if [ "sa-shopify@qea-sandbox.iam.gserviceaccount.com" != "$isSAExist" ]; then
+if [ $SA_NAME"@"$PROJECT_ID".iam.gserviceaccount.com" != "$isSAExist" ]; then
   gcloud iam service-accounts create $SA_NAME --display-name="Digital Shopify ServiceAccount"
 else
   echo ">>>>>>> SERVICE ACCOUNT Already Exist"
