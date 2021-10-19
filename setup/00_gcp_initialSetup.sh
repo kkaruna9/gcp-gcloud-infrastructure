@@ -99,7 +99,7 @@ mv $PROJECT_ID.json temp
 export SA_NAME=$SA_NAME@$PROJECT_ID.iam.gserviceaccount.com
 export GOOGLE_APPLICATION_CREDENTIALS="temp/"$PROJECT_ID.json
 
-echo -n "GCP Workshop >> List of Billing Accounts"
+echo -n "GCP Workshop >> List of Billing Accounts : "
 gcloud beta billing accounts list --format="value(name)"
 
 echo -n "Do you want to select by default first billing account from the list (y/n)? "
